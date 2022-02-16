@@ -21,7 +21,13 @@ int							broadcast;
 int							need_to_serve = 0;
 pick_delivery::s_to_c		msc;
 geometry_msgs::PoseStamped	goal;
-robot						rob = robot("idle", 1);
+robot						rob = robot("inizio", 1);
+ros::ServiceServer			servLog;
+ros::ServiceServer			servSend;
+ros::Publisher				pub_client;
+ros::Subscriber				sub_client;
+ros::Publisher				pub_robot;
+ros::Subscriber				sub_robot;
 
 bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Response &res)
 {
@@ -33,7 +39,6 @@ bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Res
 		{
 			if (u.hash == req.name && u.can_logout == 1)
 			{
-				cout << u.hash << " " << u.can_logout << endl;
 				userlist.remove(u);
 				rem = 1;
 				res.serv_resp = "bye bye!";
@@ -92,7 +97,7 @@ void	block_all_users(aula a)
 	for (auto& u : userlist)
 	{
 		if (u.x == a.x && u.y == a.y)
-			u.can_logout = 0;
+			u.can_logout = 1;
 	}
 }
 
@@ -106,12 +111,12 @@ void	get_infos(string sen, string recv, string auladst)
 		if (u.hash == sen)
 		{
 			sender = &u;
-			(*sender).can_logout = 0;
+			(*sender).can_logout = 1;
 		}
 		if (broadcast == 0 && u.hash == recv)
 		{
 			receiver = &u;
-			(*receiver).can_logout = 0;
+			(*receiver).can_logout = 1;
 		}
 	}
 
@@ -149,7 +154,7 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 				}
 				for (auto& u : userlist)
 				{
-					if (u.name == req.receiver && a.x == u.x && a.y == u.y)
+					if (u.hash == req.receiver && a.x == u.x && a.y == u.y)
 					{
 						person = 1;
 						break ;
@@ -171,7 +176,18 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 		{
 			res.serv_resp = 1;
 			get_infos(req.sender, req.receiver, req.aula);
-			need_to_serve = 1;
+			cout << "[INFO] Devo servire " << (*sender).hash << endl;
+			if (req.receiver != "0")
+			{
+				cout << "[INFO] Devo servire " << (*receiver).hash << endl;
+			}
+			cout << "[INFO] Devo servire " << (*auladest).name << endl;
+			goal.header.stamp = ros::Time::now();
+			goal.header.frame_id = "map";
+			goal.pose.position.x = (*sender).x;
+			goal.pose.position.y = (*sender).y;
+			pub_robot.publish(goal);
+			ros::spinOnce();
 		}
 	}
 	return (true);
@@ -181,10 +197,15 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 {
 	rob.distance = info->distance_to_global_goal;
 	cout << "[INFO] la distanza dal goal è: " << rob.distance << endl;
-	if (rob.distance < 0.5)
+	if (rob.distance < 0.7)
 	{
-		cout << "[INFO] Il robot è arrivato a destinazione" << endl;
+		if (rob.distance == rob.prevdist && rob.distance != 0)
+		{
+			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
+			rob.arrived++;
+		}
 	}
+	rob.prevdist = info->distance_to_global_goal;
 }
 
 void	callback_Server(const pick_delivery::c_to_s& msg)
@@ -197,12 +218,6 @@ int	main(int argc, char **argv)
 	ros::init(argc, argv, "server");
 	
 	ros::NodeHandle		node;
-	ros::ServiceServer	servLog;
-	ros::ServiceServer	servSend;
-	ros::Publisher		pub_client;
-	ros::Subscriber		sub_client;
-	ros::Publisher		pub_robot;
-	ros::Subscriber		sub_robot;
 
 	servLog = node.advertiseService("/newclient", handle_client);
 	servSend = node.advertiseService("/invio", handle_invio);
@@ -214,46 +229,7 @@ int	main(int argc, char **argv)
 	sub_robot = node.subscribe("/planner_status", 1000, check_robot);
 	aulelist = get_aule();
 
-	while (ros::ok())
-	{
-		if (need_to_serve == 1)
-		{
-			cout << "[INFO] Devo servire " << (*sender).hash << endl;
-			goal.header.stamp = ros::Time::now();
-			goal.header.frame_id = "map";
-			goal.pose.position.x = (*sender).x;
-			goal.pose.position.y = (*sender).y;
-			pub_robot.publish(goal);
-			ros::spinOnce();
-			need_to_serve = 0;
-			rob.arrived = 0;
-			rob.has_pack = !rob.has_pack;
-		}
-		if (rob.arrived == 1 && rob.has_pack == 0)
-		{
-			msc.sender = (*sender).hash;
-			msc.receiver = (*receiver).hash;
-			msc.msgs = "il robot ha preso in consegna il pacco";
-			msc.msgr = "sta arrivando un pacco per te";
-			pub_client.publish(msc);
-			ros::spinOnce();
-			need_to_serve = 1;
-			sender = receiver;
-			receiver = NULL;
-			rob.has_pack = 1;
-		}
-		else if (rob.arrived == 1)
-		{
-			msc.sender = (*sender).hash;
-			msc.receiver = "";
-			msc.msgs = "é arrivato il pacco per te";
-			pub_client.publish(msc);
-			ros::spinOnce();
-			sender = NULL;
-			receiver = NULL;
-			rob.has_pack = 0;
-		}
-		ros::spinOnce();
-	}
+	ros::spin();
+
 	return (0);
 }

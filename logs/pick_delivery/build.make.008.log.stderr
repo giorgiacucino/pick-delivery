@@ -1,0 +1,23 @@
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kbool handle_invio(pick_delivery::invio::Request&, pick_delivery::invio::Response&)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:180:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_robot[m[K’ was not declared in this scope
+    [01;31m[Kpub_robot[m[K.publish(goal);
+    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:180:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Krobot[m[K’
+    [01;36m[Kpub_robot[m[K.publish(goal);
+    [01;36m[K^~~~~~~~~[m[K
+    [32m[Krobot[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kvoid check_robot(const ConstPtr&)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:199:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_client[m[K’ was not declared in this scope
+    [01;31m[Kpub_client[m[K.publish(msc);
+    [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:199:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ku_int[m[K’
+    [01;36m[Kpub_client[m[K.publish(msc);
+    [01;36m[K^~~~~~~~~~[m[K
+    [32m[Ku_int[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:236:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kelse[m[K’ without a previous ‘[01m[Kif[m[K’
+   [01;31m[Kelse[m[K if (rob.arrived == 1)
+   [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2

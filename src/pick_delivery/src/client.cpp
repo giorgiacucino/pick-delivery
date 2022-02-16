@@ -34,10 +34,14 @@ void	mostra_aule(list<aula> aulelist)
 
 void	callback_Client(const pick_delivery::s_to_c& msg)
 {
+	cout << "sender" << msg.sender << endl << flush;
+	//cout << "receiver" << msg.receiver << endl << flush;
 	if (msg.sender == name)
-		cout << msg.msgs << endl;
+		cout << "[INFO]" << msg.msgs << endl;
 	if (msg.receiver == name)
-		cout << msg.msgr << endl;
+		cout << "[INFO]" << msg.msgr << endl;
+	else if (msg.receiver == "0" && msg.auladest == aulaclient)
+		cout << "[INFO]" << msg.msgr << endl;
 }
 
 int main(int argc, char **argv)
@@ -96,7 +100,8 @@ int main(int argc, char **argv)
 		cout << "Cosa vuoi fare?" << endl;
 		cout << "(1) Inviare un pacco ad un'altra aula" << endl;
 		cout << "(2) Spostarti in un'altra aula" << endl;
-		cout << "(3) Uscire" << endl;
+		cout << "(3) controllare se è arrivato un pacco" << endl;
+		cout << "(4) Uscire" << endl;
 		cout << "inserisci qui il numero: ";
 		cin >> scelta;
 		if (scelta == 1)
@@ -136,7 +141,7 @@ int main(int argc, char **argv)
 					else if (msg2send.response.serv_resp == 3)
 						cout << "L'aula che hai inserito non è valida, riprova" << endl;
 					else if (msg2send.response.serv_resp == 4)
-						cout << "L'utente a cui vuoi inviare il pacco non esiste o non si trova nell'aula" << aulainvio << ", riprova"<< endl;
+						cout << "L'utente a cui vuoi inviare il pacco non esiste o non si trova nell'" << aulainvio << ", riprova"<< endl;
 					if (ok == 0)
 					{
 						cout << "A quale aula vuoi inviarlo?" << endl;
@@ -178,6 +183,11 @@ int main(int argc, char **argv)
 		}
 		else if (scelta == 3)
 		{
+			ros::spinOnce();
+			continue ;
+		}
+		else if (scelta == 4)
+		{
 			msglog.request.name = name;
 			msglog.request.type_service = 0;
 			if (SClog.call(msglog))
@@ -194,6 +204,7 @@ int main(int argc, char **argv)
 			cout << endl;
 			cout << "Scelta non valida! Controlla il numero che hai inserito" << endl;
 		}
+		ros::spinOnce();
 	}
 	return (0);
 }

@@ -1,0 +1,7 @@
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:236:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kelse[m[K’ without a previous ‘[01m[Kif[m[K’
+   [01;31m[Kelse[m[K if (rob.arrived == 1)
+   [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2

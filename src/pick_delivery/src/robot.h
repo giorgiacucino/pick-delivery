@@ -8,14 +8,12 @@ class robot
 		string	status;
 		float	distance;
 		int		free;
-		int		arrived;
-		int		has_pack;
+		float	prevdist;
 	robot(string s, int f)
 	{
 		status = s;
 		free = f;
 		distance = 0;
-		arrived = 0;
-		has_pack = 0;
+		prevdist = 0;
 	}
 };

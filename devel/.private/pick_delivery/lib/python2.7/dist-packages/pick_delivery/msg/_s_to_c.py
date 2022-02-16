@@ -8,15 +8,16 @@ import struct
 
 
 class s_to_c(genpy.Message):
-  _md5sum = "8e7cff9e499fc0facdc642b5e46e6fa7"
+  _md5sum = "0b8b43e320b3eab867baa8730a8cbde6"
   _type = "pick_delivery/s_to_c"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """string sender
 string receiver
+string auladest
 string msgs
 string msgr"""
-  __slots__ = ['sender','receiver','msgs','msgr']
-  _slot_types = ['string','string','string','string']
+  __slots__ = ['sender','receiver','auladest','msgs','msgr']
+  _slot_types = ['string','string','string','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +27,7 @@ string msgr"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       sender,receiver,msgs,msgr
+       sender,receiver,auladest,msgs,msgr
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -39,6 +40,8 @@ string msgr"""
         self.sender = ''
       if self.receiver is None:
         self.receiver = ''
+      if self.auladest is None:
+        self.auladest = ''
       if self.msgs is None:
         self.msgs = ''
       if self.msgr is None:
@@ -46,6 +49,7 @@ string msgr"""
     else:
       self.sender = ''
       self.receiver = ''
+      self.auladest = ''
       self.msgs = ''
       self.msgr = ''
 
@@ -68,6 +72,12 @@ string msgr"""
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.receiver
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.auladest
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -120,6 +130,15 @@ string msgr"""
       start = end
       end += length
       if python3:
+        self.auladest = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.auladest = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
         self.msgs = str[start:end].decode('utf-8', 'rosmsg')
       else:
         self.msgs = str[start:end]
@@ -151,6 +170,12 @@ string msgr"""
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.receiver
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.auladest
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -198,6 +223,15 @@ string msgr"""
         self.receiver = str[start:end].decode('utf-8', 'rosmsg')
       else:
         self.receiver = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.auladest = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.auladest = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])

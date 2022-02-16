@@ -17,6 +17,11 @@
     :initarg :receiver
     :type cl:string
     :initform "")
+   (auladest
+    :reader auladest
+    :initarg :auladest
+    :type cl:string
+    :initform "")
    (msgs
     :reader msgs
     :initarg :msgs
@@ -47,6 +52,11 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader pick_delivery-msg:receiver-val is deprecated.  Use pick_delivery-msg:receiver instead.")
   (receiver m))
 
+(cl:ensure-generic-function 'auladest-val :lambda-list '(m))
+(cl:defmethod auladest-val ((m <s_to_c>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader pick_delivery-msg:auladest-val is deprecated.  Use pick_delivery-msg:auladest instead.")
+  (auladest m))
+
 (cl:ensure-generic-function 'msgs-val :lambda-list '(m))
 (cl:defmethod msgs-val ((m <s_to_c>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader pick_delivery-msg:msgs-val is deprecated.  Use pick_delivery-msg:msgs instead.")
@@ -70,6 +80,12 @@
     (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
   (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'receiver))
+  (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'auladest))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_str_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_str_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (c) (cl:write-byte (cl:char-code c) ostream)) (cl:slot-value msg 'auladest))
   (cl:let ((__ros_str_len (cl:length (cl:slot-value msg 'msgs))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_str_len) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_str_len) ostream)
@@ -106,6 +122,14 @@
       (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'auladest) (cl:make-string __ros_str_len))
+      (cl:dotimes (__ros_str_idx __ros_str_len msg)
+        (cl:setf (cl:char (cl:slot-value msg 'auladest) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
+    (cl:let ((__ros_str_len 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) __ros_str_len) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) __ros_str_len) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'msgs) (cl:make-string __ros_str_len))
       (cl:dotimes (__ros_str_idx __ros_str_len msg)
         (cl:setf (cl:char (cl:slot-value msg 'msgs) __ros_str_idx) (cl:code-char (cl:read-byte istream)))))
@@ -127,20 +151,21 @@
   "pick_delivery/s_to_c")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<s_to_c>)))
   "Returns md5sum for a message object of type '<s_to_c>"
-  "8e7cff9e499fc0facdc642b5e46e6fa7")
+  "0b8b43e320b3eab867baa8730a8cbde6")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 's_to_c)))
   "Returns md5sum for a message object of type 's_to_c"
-  "8e7cff9e499fc0facdc642b5e46e6fa7")
+  "0b8b43e320b3eab867baa8730a8cbde6")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<s_to_c>)))
   "Returns full string definition for message of type '<s_to_c>"
-  (cl:format cl:nil "string sender~%string receiver~%string msgs~%string msgr~%~%"))
+  (cl:format cl:nil "string sender~%string receiver~%string auladest~%string msgs~%string msgr~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 's_to_c)))
   "Returns full string definition for message of type 's_to_c"
-  (cl:format cl:nil "string sender~%string receiver~%string msgs~%string msgr~%~%"))
+  (cl:format cl:nil "string sender~%string receiver~%string auladest~%string msgs~%string msgr~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <s_to_c>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'sender))
      4 (cl:length (cl:slot-value msg 'receiver))
+     4 (cl:length (cl:slot-value msg 'auladest))
      4 (cl:length (cl:slot-value msg 'msgs))
      4 (cl:length (cl:slot-value msg 'msgr))
 ))
@@ -149,6 +174,7 @@
   (cl:list 's_to_c
     (cl:cons ':sender (sender msg))
     (cl:cons ':receiver (receiver msg))
+    (cl:cons ':auladest (auladest msg))
     (cl:cons ':msgs (msgs msg))
     (cl:cons ':msgr (msgr msg))
 ))

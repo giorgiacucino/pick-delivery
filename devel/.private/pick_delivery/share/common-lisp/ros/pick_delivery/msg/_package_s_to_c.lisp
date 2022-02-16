@@ -3,6 +3,8 @@
           SENDER
           RECEIVER-VAL
           RECEIVER
+          AULADEST-VAL
+          AULADEST
           MSGS-VAL
           MSGS
           MSGR-VAL

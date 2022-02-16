@@ -20,6 +20,7 @@ class s_to_c {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.sender = null;
       this.receiver = null;
+      this.auladest = null;
       this.msgs = null;
       this.msgr = null;
     }
@@ -35,6 +36,12 @@ class s_to_c {
       }
       else {
         this.receiver = '';
+      }
+      if (initObj.hasOwnProperty('auladest')) {
+        this.auladest = initObj.auladest
+      }
+      else {
+        this.auladest = '';
       }
       if (initObj.hasOwnProperty('msgs')) {
         this.msgs = initObj.msgs
@@ -57,6 +64,8 @@ class s_to_c {
     bufferOffset = _serializer.string(obj.sender, buffer, bufferOffset);
     // Serialize message field [receiver]
     bufferOffset = _serializer.string(obj.receiver, buffer, bufferOffset);
+    // Serialize message field [auladest]
+    bufferOffset = _serializer.string(obj.auladest, buffer, bufferOffset);
     // Serialize message field [msgs]
     bufferOffset = _serializer.string(obj.msgs, buffer, bufferOffset);
     // Serialize message field [msgr]
@@ -72,6 +81,8 @@ class s_to_c {
     data.sender = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [receiver]
     data.receiver = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [auladest]
+    data.auladest = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [msgs]
     data.msgs = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [msgr]
@@ -83,9 +94,10 @@ class s_to_c {
     let length = 0;
     length += object.sender.length;
     length += object.receiver.length;
+    length += object.auladest.length;
     length += object.msgs.length;
     length += object.msgr.length;
-    return length + 16;
+    return length + 20;
   }
 
   static datatype() {
@@ -95,7 +107,7 @@ class s_to_c {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '8e7cff9e499fc0facdc642b5e46e6fa7';
+    return '0b8b43e320b3eab867baa8730a8cbde6';
   }
 
   static messageDefinition() {
@@ -103,6 +115,7 @@ class s_to_c {
     return `
     string sender
     string receiver
+    string auladest
     string msgs
     string msgr
     `;
@@ -126,6 +139,13 @@ class s_to_c {
     }
     else {
       resolved.receiver = ''
+    }
+
+    if (msg.auladest !== undefined) {
+      resolved.auladest = msg.auladest;
+    }
+    else {
+      resolved.auladest = ''
     }
 
     if (msg.msgs !== undefined) {
