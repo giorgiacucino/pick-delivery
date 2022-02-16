@@ -24,17 +24,32 @@ struct s_to_c_
   typedef s_to_c_<ContainerAllocator> Type;
 
   s_to_c_()
-    : msgs()  {
+    : sender()
+    , receiver()
+    , msgs()
+    , msgr()  {
     }
   s_to_c_(const ContainerAllocator& _alloc)
-    : msgs(_alloc)  {
+    : sender(_alloc)
+    , receiver(_alloc)
+    , msgs(_alloc)
+    , msgr(_alloc)  {
   (void)_alloc;
     }
 
 
 
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _sender_type;
+  _sender_type sender;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _receiver_type;
+  _receiver_type receiver;
+
    typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msgs_type;
   _msgs_type msgs;
+
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _msgr_type;
+  _msgr_type msgr;
 
 
 
@@ -65,7 +80,10 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::pick_delivery::s_to_c_<ContainerAllocator1> & lhs, const ::pick_delivery::s_to_c_<ContainerAllocator2> & rhs)
 {
-  return lhs.msgs == rhs.msgs;
+  return lhs.sender == rhs.sender &&
+    lhs.receiver == rhs.receiver &&
+    lhs.msgs == rhs.msgs &&
+    lhs.msgr == rhs.msgr;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -122,12 +140,12 @@ struct MD5Sum< ::pick_delivery::s_to_c_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "1d8e418f1fcd36e8930c91006766237d";
+    return "8e7cff9e499fc0facdc642b5e46e6fa7";
   }
 
   static const char* value(const ::pick_delivery::s_to_c_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1d8e418f1fcd36e8ULL;
-  static const uint64_t static_value2 = 0x930c91006766237dULL;
+  static const uint64_t static_value1 = 0x8e7cff9e499fc0faULL;
+  static const uint64_t static_value2 = 0xcdc642b5e46e6fa7ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,7 +164,10 @@ struct Definition< ::pick_delivery::s_to_c_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string msgs\n"
+    return "string sender\n"
+"string receiver\n"
+"string msgs\n"
+"string msgr\n"
 ;
   }
 
@@ -165,7 +186,10 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.sender);
+      stream.next(m.receiver);
       stream.next(m.msgs);
+      stream.next(m.msgr);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -184,8 +208,14 @@ struct Printer< ::pick_delivery::s_to_c_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::pick_delivery::s_to_c_<ContainerAllocator>& v)
   {
+    s << indent << "sender: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.sender);
+    s << indent << "receiver: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.receiver);
     s << indent << "msgs: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msgs);
+    s << indent << "msgr: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.msgr);
   }
 };
 

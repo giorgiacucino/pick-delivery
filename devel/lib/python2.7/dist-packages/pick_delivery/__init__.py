@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/__init__.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/__init__.py

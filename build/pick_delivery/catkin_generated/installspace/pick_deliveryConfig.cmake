@@ -67,14 +67,14 @@ set(pick_delivery_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(pick_delivery_SOURCE_PREFIX /home/me/progetto_labiagi/src/pick_delivery)
-  set(pick_delivery_DEVEL_PREFIX /home/me/progetto_labiagi/devel/.private/pick_delivery)
+  set(pick_delivery_SOURCE_PREFIX /home/me/lab/src/pick_delivery)
+  set(pick_delivery_DEVEL_PREFIX /home/me/lab/devel/.private/pick_delivery)
   set(pick_delivery_INSTALL_PREFIX "")
   set(pick_delivery_PREFIX ${pick_delivery_DEVEL_PREFIX})
 else()
   set(pick_delivery_SOURCE_PREFIX "")
   set(pick_delivery_DEVEL_PREFIX "")
-  set(pick_delivery_INSTALL_PREFIX /home/me/progetto_labiagi/install)
+  set(pick_delivery_INSTALL_PREFIX /home/me/lab/install)
   set(pick_delivery_PREFIX ${pick_delivery_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/me/progetto_labiagi/install/lib;/home/me/progetto_labiagi/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/me/lab/install/lib;/home/me/lab/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

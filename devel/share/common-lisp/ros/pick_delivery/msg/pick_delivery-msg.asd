@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/pick_delivery-msg.asd
+/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/pick_delivery-msg.asd

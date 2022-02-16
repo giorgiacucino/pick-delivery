@@ -67,14 +67,14 @@ set(pick_delivery_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(pick_delivery_SOURCE_PREFIX /home/me/progetto_labiagi/src/pick_delivery)
-  set(pick_delivery_DEVEL_PREFIX /home/me/progetto_labiagi/devel/.private/pick_delivery)
+  set(pick_delivery_SOURCE_PREFIX /home/me/lab/src/pick_delivery)
+  set(pick_delivery_DEVEL_PREFIX /home/me/lab/devel/.private/pick_delivery)
   set(pick_delivery_INSTALL_PREFIX "")
   set(pick_delivery_PREFIX ${pick_delivery_DEVEL_PREFIX})
 else()
   set(pick_delivery_SOURCE_PREFIX "")
   set(pick_delivery_DEVEL_PREFIX "")
-  set(pick_delivery_INSTALL_PREFIX /home/me/progetto_labiagi/install)
+  set(pick_delivery_INSTALL_PREFIX /home/me/lab/install)
   set(pick_delivery_PREFIX ${pick_delivery_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(pick_delivery_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/me/progetto_labiagi/devel/.private/pick_delivery/include " STREQUAL " ")
+if(NOT "/home/me/lab/devel/.private/pick_delivery/include " STREQUAL " ")
   set(pick_delivery_INCLUDE_DIRS "")
-  set(_include_dirs "/home/me/progetto_labiagi/devel/.private/pick_delivery/include")
+  set(_include_dirs "/home/me/lab/devel/.private/pick_delivery/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/me/progetto_labiagi/devel/.private/pick_delivery/include " STREQUA
         message(FATAL_ERROR "Project 'pick_delivery' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'pick_delivery' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/me/progetto_labiagi/src/pick_delivery/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'pick_delivery' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/me/lab/src/pick_delivery/${idir}'.  ${_report}")
     endif()
     _list_append_unique(pick_delivery_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/me/progetto_labiagi/devel/.private/pick_delivery/lib;/home/me/progetto_labiagi/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/me/lab/devel/.private/pick_delivery/lib;/home/me/lab/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

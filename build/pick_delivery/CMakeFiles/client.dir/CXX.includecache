@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/c_to_s.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/c_to_s.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/invio.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invio.h
 ros/service_traits.h
 -
 pick_delivery/invioRequest.h
@@ -30,7 +30,7 @@ pick_delivery/invioRequest.h
 pick_delivery/invioResponse.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/invioRequest.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invioRequest.h
 string
 -
 vector
@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/invioResponse.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invioResponse.h
 string
 -
 vector
@@ -62,7 +62,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/login.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h
 ros/service_traits.h
 -
 pick_delivery/loginRequest.h
@@ -70,7 +70,7 @@ pick_delivery/loginRequest.h
 pick_delivery/loginResponse.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/loginRequest.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/loginRequest.h
 string
 -
 vector
@@ -86,7 +86,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/loginResponse.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/loginResponse.h
 string
 -
 vector
@@ -102,7 +102,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/s_to_c.h
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/s_to_c.h
 string
 -
 vector
@@ -118,7 +118,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/me/progetto_labiagi/src/pick_delivery/src/aula.h
+/home/me/lab/src/pick_delivery/src/aula.h
 stdlib.h
 -
 string
@@ -134,21 +134,21 @@ fstream
 list
 -
 
-/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp
+/home/me/lab/src/pick_delivery/src/client.cpp
 ros/ros.h
 -
 pick_delivery/login.h
-/home/me/progetto_labiagi/src/pick_delivery/src/pick_delivery/login.h
+/home/me/lab/src/pick_delivery/src/pick_delivery/login.h
 pick_delivery/invio.h
-/home/me/progetto_labiagi/src/pick_delivery/src/pick_delivery/invio.h
+/home/me/lab/src/pick_delivery/src/pick_delivery/invio.h
 pick_delivery/c_to_s.h
-/home/me/progetto_labiagi/src/pick_delivery/src/pick_delivery/c_to_s.h
+/home/me/lab/src/pick_delivery/src/pick_delivery/c_to_s.h
 pick_delivery/s_to_c.h
-/home/me/progetto_labiagi/src/pick_delivery/src/pick_delivery/s_to_c.h
+/home/me/lab/src/pick_delivery/src/pick_delivery/s_to_c.h
 list
 -
 aula.h
-/home/me/progetto_labiagi/src/pick_delivery/src/aula.h
+/home/me/lab/src/pick_delivery/src/aula.h
 cstdlib
 -
 sstream

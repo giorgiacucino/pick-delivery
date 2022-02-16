@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/me/progetto_labiagi/src/pick_delivery
+CMAKE_SOURCE_DIR = /home/me/lab/src/pick_delivery
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/pick_delivery
+CMAKE_BINARY_DIR = /home/me/lab/build/pick_delivery
 
 # Utility rule file for pick_delivery_genlisp.
 
@@ -67,6 +67,6 @@ CMakeFiles/pick_delivery_genlisp.dir/clean:
 .PHONY : CMakeFiles/pick_delivery_genlisp.dir/clean
 
 CMakeFiles/pick_delivery_genlisp.dir/depend:
-	cd /home/me/progetto_labiagi/build/pick_delivery && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/me/progetto_labiagi/src/pick_delivery /home/me/progetto_labiagi/src/pick_delivery /home/me/progetto_labiagi/build/pick_delivery /home/me/progetto_labiagi/build/pick_delivery /home/me/progetto_labiagi/build/pick_delivery/CMakeFiles/pick_delivery_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/me/lab/build/pick_delivery && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/me/lab/src/pick_delivery /home/me/lab/src/pick_delivery /home/me/lab/build/pick_delivery /home/me/lab/build/pick_delivery /home/me/lab/build/pick_delivery/CMakeFiles/pick_delivery_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pick_delivery_genlisp.dir/depend
 

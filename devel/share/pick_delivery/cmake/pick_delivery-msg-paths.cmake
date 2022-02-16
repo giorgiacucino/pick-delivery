@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_delivery-msg-paths.cmake
+/home/me/lab/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_delivery-msg-paths.cmake

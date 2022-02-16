@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/msg/s_to_c.js
+/home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/msg/s_to_c.js

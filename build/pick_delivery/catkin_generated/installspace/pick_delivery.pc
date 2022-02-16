@@ -1,4 +1,4 @@
-prefix=/home/me/progetto_labiagi/install
+prefix=/home/me/lab/install
 
 Name: pick_delivery
 Description: Description of pick_delivery

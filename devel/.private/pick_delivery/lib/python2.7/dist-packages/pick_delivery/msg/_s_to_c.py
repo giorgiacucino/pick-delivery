@@ -8,12 +8,15 @@ import struct
 
 
 class s_to_c(genpy.Message):
-  _md5sum = "1d8e418f1fcd36e8930c91006766237d"
+  _md5sum = "8e7cff9e499fc0facdc642b5e46e6fa7"
   _type = "pick_delivery/s_to_c"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """string msgs"""
-  __slots__ = ['msgs']
-  _slot_types = ['string']
+  _full_text = """string sender
+string receiver
+string msgs
+string msgr"""
+  __slots__ = ['sender','receiver','msgs','msgr']
+  _slot_types = ['string','string','string','string']
 
   def __init__(self, *args, **kwds):
     """
@@ -23,7 +26,7 @@ class s_to_c(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       msgs
+       sender,receiver,msgs,msgr
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -32,10 +35,19 @@ class s_to_c(genpy.Message):
     if args or kwds:
       super(s_to_c, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
+      if self.sender is None:
+        self.sender = ''
+      if self.receiver is None:
+        self.receiver = ''
       if self.msgs is None:
         self.msgs = ''
+      if self.msgr is None:
+        self.msgr = ''
     else:
+      self.sender = ''
+      self.receiver = ''
       self.msgs = ''
+      self.msgr = ''
 
   def _get_types(self):
     """
@@ -49,7 +61,25 @@ class s_to_c(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
+      _x = self.sender
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.receiver
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.msgs
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.msgr
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -72,9 +102,36 @@ class s_to_c(genpy.Message):
       start = end
       end += length
       if python3:
+        self.sender = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.sender = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.receiver = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.receiver = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
         self.msgs = str[start:end].decode('utf-8', 'rosmsg')
       else:
         self.msgs = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.msgr = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.msgr = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -87,7 +144,25 @@ class s_to_c(genpy.Message):
     :param numpy: numpy python module
     """
     try:
+      _x = self.sender
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.receiver
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self.msgs
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.msgr
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -111,9 +186,36 @@ class s_to_c(genpy.Message):
       start = end
       end += length
       if python3:
+        self.sender = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.sender = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.receiver = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.receiver = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
         self.msgs = str[start:end].decode('utf-8', 'rosmsg')
       else:
         self.msgs = str[start:end]
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.msgr = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.msgr = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill

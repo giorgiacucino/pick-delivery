@@ -1,0 +1,171 @@
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:17:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kuser::user()[m[K’
+ user      [01;31m[Ksender[m[K;
+           [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:4:0[m[K:
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:14:9:[m[K [01;36m[Knote: [m[Kcandidate: user::user(std::__cxx11::string, int)
+         [01;36m[Kuser[m[K(string s, int d)
+         [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:14:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user::user(const user&)
+ class [01;36m[Kuser[m[K
+       [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user::user(user&&)
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:18:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kuser::user()[m[K’
+ user      [01;31m[Kreceiver[m[K;
+           [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:4:0[m[K:
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:14:9:[m[K [01;36m[Knote: [m[Kcandidate: user::user(std::__cxx11::string, int)
+         [01;36m[Kuser[m[K(string s, int d)
+         [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:14:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user::user(const user&)
+ class [01;36m[Kuser[m[K
+       [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user::user(user&&)
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:19:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kaula::aula()[m[K’
+ aula      [01;31m[Kauladest[m[K;
+           [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:6:0[m[K:
+[01m[K/home/me/lab/src/pick_delivery/src/aula.h:16:9:[m[K [01;36m[Knote: [m[Kcandidate: aula::aula(std::__cxx11::string, float, float)
+         [01;36m[Kaula[m[K(string s, float tx, float ty)
+         [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/aula.h:16:9:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/aula.h:10:7:[m[K [01;36m[Knote: [m[Kcandidate: aula::aula(const aula&)
+ class [01;36m[Kaula[m[K
+       [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/aula.h:10:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/aula.h:10:7:[m[K [01;36m[Knote: [m[Kcandidate: aula::aula(aula&&)
+[01m[K/home/me/lab/src/pick_delivery/src/aula.h:10:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kvoid get_infos(std::__cxx11::string, std::__cxx11::string, std::__cxx11::string)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:115:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kblock_all_users[m[K’ was not declared in this scope
+   [01;31m[Kblock_all_users[m[K(auladest);
+   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:225:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoordx[m[K’ was not declared in this scope
+    goal.pose.position.x = [01;31m[Kcoordx[m[K;
+                           [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:226:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoordy[m[K’ was not declared in this scope
+    goal.pose.position.y = [01;31m[Kcoordy[m[K;
+                           [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:235:17:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpick_delivery::s_to_c_<std::allocator<void> >::_sender_type {aka std::__cxx11::basic_string<char>}[m[K’ and ‘[01m[Kuser[m[K’)
+    msc.sender = [01;31m[Ksender[m[K;
+                 [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:654:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(const basic_string& __str)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:654:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:693:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(const _CharT* __s)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:693:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kconst char*[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:704:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(_CharT __c)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:704:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kchar[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:722:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(basic_string&& __str)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:722:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:785:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(initializer_list<_CharT> __l)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:785:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kstd::initializer_list<char>[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:236:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpick_delivery::s_to_c_<std::allocator<void> >::_receiver_type {aka std::__cxx11::basic_string<char>}[m[K’ and ‘[01m[Kuser[m[K’)
+    msc.receiver = [01;31m[Kreceiver[m[K;
+                   [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:654:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(const basic_string& __str)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:654:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:693:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(const _CharT* __s)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:693:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kconst char*[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:704:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(_CharT __c)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:704:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kchar[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:722:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(basic_string&& __str)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:722:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:785:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(initializer_list<_CharT> __l)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:785:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kstd::initializer_list<char>[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:243:15:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kuser[m[K’ and ‘[01m[Kconst char [1][m[K’)
+    receiver = [01;31m[K""[m[K;
+               [01;31m[K^~[m[K
+In file included from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:4:0[m[K:
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user& user::operator=(const user&)
+ class [01;36m[Kuser[m[K
+       [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kconst user&[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user& user::operator=(user&&)
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kuser&&[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:248:17:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kpick_delivery::s_to_c_<std::allocator<void> >::_sender_type {aka std::__cxx11::basic_string<char>}[m[K’ and ‘[01m[Kuser[m[K’)
+    msc.sender = [01;31m[Ksender[m[K;
+                 [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/7/string:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/platform.h:38[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/basic_string.h:654:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(const basic_string& __str)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:654:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:693:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(const _CharT* __s)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:693:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kconst char*[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:704:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(_CharT __c)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:704:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kchar[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:722:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(basic_string&& __str)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:722:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’
+[01m[K/usr/include/c++/7/bits/basic_string.h:785:7:[m[K [01;36m[Knote: [m[Kcandidate: std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]
+       [01;36m[Koperator[m[K=(initializer_list<_CharT> __l)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/basic_string.h:785:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kuser[m[K’ to ‘[01m[Kstd::initializer_list<char>[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:253:13:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kuser[m[K’ and ‘[01m[Kconst char [1][m[K’)
+    sender = [01;31m[K""[m[K;
+             [01;31m[K^~[m[K
+In file included from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:4:0[m[K:
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user& user::operator=(const user&)
+ class [01;36m[Kuser[m[K
+       [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kconst user&[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user& user::operator=(user&&)
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kuser&&[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:254:15:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kuser[m[K’ and ‘[01m[Kconst char [1][m[K’)
+    receiver = [01;31m[K""[m[K;
+               [01;31m[K^~[m[K
+In file included from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:4:0[m[K:
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user& user::operator=(const user&)
+ class [01;36m[Kuser[m[K
+       [01;36m[K^~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kconst user&[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[Kcandidate: user& user::operator=(user&&)
+[01m[K/home/me/lab/src/pick_delivery/src/users.h:5:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kuser&&[m[K’
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

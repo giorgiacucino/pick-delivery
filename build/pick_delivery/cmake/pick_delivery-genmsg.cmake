@@ -2,7 +2,7 @@
 
 message(STATUS "pick_delivery: 2 messages, 2 services")
 
-set(MSG_I_FLAGS "-Ipick_delivery:/home/me/progetto_labiagi/src/pick_delivery/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ipick_delivery:/home/me/lab/src/pick_delivery/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,24 +17,24 @@ add_custom_target(pick_delivery_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/invio.srv" NAME_WE)
 add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/lab/src/pick_delivery/srv/invio.srv" ""
 )
 
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" ""
 )
 
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" ""
 )
 
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/lab/src/pick_delivery/srv/login.srv" ""
 )
 
 #
@@ -44,13 +44,13 @@ add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg"
+  "/home/me/lab/src/pick_delivery/msg/c_to_s.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pick_delivery
 )
 _generate_msg_cpp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg"
+  "/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pick_delivery
@@ -58,13 +58,13 @@ _generate_msg_cpp(pick_delivery
 
 ### Generating Services
 _generate_srv_cpp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv"
+  "/home/me/lab/src/pick_delivery/srv/invio.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_cpp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv"
+  "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pick_delivery
@@ -82,13 +82,13 @@ add_custom_target(pick_delivery_generate_messages_cpp
 add_dependencies(pick_delivery_generate_messages pick_delivery_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/invio.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -101,13 +101,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pick_delivery_generate_messages_cpp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg"
+  "/home/me/lab/src/pick_delivery/msg/c_to_s.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pick_delivery
 )
 _generate_msg_eus(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg"
+  "/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pick_delivery
@@ -115,13 +115,13 @@ _generate_msg_eus(pick_delivery
 
 ### Generating Services
 _generate_srv_eus(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv"
+  "/home/me/lab/src/pick_delivery/srv/invio.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_eus(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv"
+  "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pick_delivery
@@ -139,13 +139,13 @@ add_custom_target(pick_delivery_generate_messages_eus
 add_dependencies(pick_delivery_generate_messages pick_delivery_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/invio.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -158,13 +158,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pick_delivery_generate_messages_eus
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg"
+  "/home/me/lab/src/pick_delivery/msg/c_to_s.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pick_delivery
 )
 _generate_msg_lisp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg"
+  "/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pick_delivery
@@ -172,13 +172,13 @@ _generate_msg_lisp(pick_delivery
 
 ### Generating Services
 _generate_srv_lisp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv"
+  "/home/me/lab/src/pick_delivery/srv/invio.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_lisp(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv"
+  "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pick_delivery
@@ -196,13 +196,13 @@ add_custom_target(pick_delivery_generate_messages_lisp
 add_dependencies(pick_delivery_generate_messages pick_delivery_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/invio.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -215,13 +215,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pick_delivery_generate_messages_lis
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg"
+  "/home/me/lab/src/pick_delivery/msg/c_to_s.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pick_delivery
 )
 _generate_msg_nodejs(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg"
+  "/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pick_delivery
@@ -229,13 +229,13 @@ _generate_msg_nodejs(pick_delivery
 
 ### Generating Services
 _generate_srv_nodejs(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv"
+  "/home/me/lab/src/pick_delivery/srv/invio.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_nodejs(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv"
+  "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pick_delivery
@@ -253,13 +253,13 @@ add_custom_target(pick_delivery_generate_messages_nodejs
 add_dependencies(pick_delivery_generate_messages pick_delivery_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/invio.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -272,13 +272,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pick_delivery_generate_messages_nod
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg"
+  "/home/me/lab/src/pick_delivery/msg/c_to_s.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pick_delivery
 )
 _generate_msg_py(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg"
+  "/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pick_delivery
@@ -286,13 +286,13 @@ _generate_msg_py(pick_delivery
 
 ### Generating Services
 _generate_srv_py(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv"
+  "/home/me/lab/src/pick_delivery/srv/invio.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_py(pick_delivery
-  "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv"
+  "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pick_delivery
@@ -310,13 +310,13 @@ add_custom_target(pick_delivery_generate_messages_py
 add_dependencies(pick_delivery_generate_messages pick_delivery_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/invio.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

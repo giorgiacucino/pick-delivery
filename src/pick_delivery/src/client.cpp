@@ -34,7 +34,10 @@ void	mostra_aule(list<aula> aulelist)
 
 void	callback_Client(const pick_delivery::s_to_c& msg)
 {
-	return ;
+	if (msg.sender == name)
+		cout << msg.msgs << endl;
+	if (msg.receiver == name)
+		cout << msg.msgr << endl;
 }
 
 int main(int argc, char **argv)

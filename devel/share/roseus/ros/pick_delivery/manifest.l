@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l
+/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l

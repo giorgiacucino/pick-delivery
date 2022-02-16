@@ -1,8 +1,8 @@
-# Install script for directory: /home/me/progetto_labiagi/src/pick_delivery
+# Install script for directory: /home/me/lab/src/pick_delivery
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/me/progetto_labiagi/install")
+  set(CMAKE_INSTALL_PREFIX "/home/me/lab/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,149 +49,149 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/me/progetto_labiagi/install/_setup_util.py")
+   "/home/me/lab/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE PROGRAM FILES "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/me/lab/install" TYPE PROGRAM FILES "/home/me/lab/build/pick_delivery/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/me/progetto_labiagi/install/env.sh")
+   "/home/me/lab/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE PROGRAM FILES "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/me/lab/install" TYPE PROGRAM FILES "/home/me/lab/build/pick_delivery/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/me/progetto_labiagi/install/setup.bash;/home/me/progetto_labiagi/install/local_setup.bash")
+   "/home/me/lab/install/setup.bash;/home/me/lab/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE FILE FILES
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/setup.bash"
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/me/lab/install" TYPE FILE FILES
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/setup.bash"
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/me/progetto_labiagi/install/setup.sh;/home/me/progetto_labiagi/install/local_setup.sh")
+   "/home/me/lab/install/setup.sh;/home/me/lab/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE FILE FILES
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/setup.sh"
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/me/lab/install" TYPE FILE FILES
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/setup.sh"
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/me/progetto_labiagi/install/setup.zsh;/home/me/progetto_labiagi/install/local_setup.zsh")
+   "/home/me/lab/install/setup.zsh;/home/me/lab/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE FILE FILES
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/setup.zsh"
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/me/lab/install" TYPE FILE FILES
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/setup.zsh"
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/me/progetto_labiagi/install/.rosinstall")
+   "/home/me/lab/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/me/progetto_labiagi/install" TYPE FILE FILES "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/me/lab/install" TYPE FILE FILES "/home/me/lab/build/pick_delivery/catkin_generated/installspace/.rosinstall")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/msg" TYPE FILE FILES
-    "/home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg"
-    "/home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg"
+    "/home/me/lab/src/pick_delivery/msg/c_to_s.msg"
+    "/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/srv" TYPE FILE FILES
-    "/home/me/progetto_labiagi/src/pick_delivery/srv/login.srv"
-    "/home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv"
+    "/home/me/lab/src/pick_delivery/srv/login.srv"
+    "/home/me/lab/src/pick_delivery/srv/invio.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/cmake" TYPE FILE FILES "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/pick_delivery-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/cmake" TYPE FILE FILES "/home/me/lab/build/pick_delivery/catkin_generated/installspace/pick_delivery-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/me/lab/devel/.private/pick_delivery/include/pick_delivery")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/me/progetto_labiagi/devel/.private/pick_delivery/share/roseus/ros/pick_delivery")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/me/progetto_labiagi/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/pick_delivery.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/me/lab/build/pick_delivery/catkin_generated/installspace/pick_delivery.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/cmake" TYPE FILE FILES "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/pick_delivery-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/cmake" TYPE FILE FILES "/home/me/lab/build/pick_delivery/catkin_generated/installspace/pick_delivery-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/cmake" TYPE FILE FILES
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/pick_deliveryConfig.cmake"
-    "/home/me/progetto_labiagi/build/pick_delivery/catkin_generated/installspace/pick_deliveryConfig-version.cmake"
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/pick_deliveryConfig.cmake"
+    "/home/me/lab/build/pick_delivery/catkin_generated/installspace/pick_deliveryConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery" TYPE FILE FILES "/home/me/progetto_labiagi/src/pick_delivery/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery" TYPE FILE FILES "/home/me/lab/src/pick_delivery/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/me/progetto_labiagi/build/pick_delivery/gtest/cmake_install.cmake")
+  include("/home/me/lab/build/pick_delivery/gtest/cmake_install.cmake")
 
 endif()
 
@@ -203,5 +203,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/me/progetto_labiagi/build/pick_delivery/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/me/lab/build/pick_delivery/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

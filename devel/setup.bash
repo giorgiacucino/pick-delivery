@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/catkin_tools_prebuild/setup.bash
+/home/me/lab/devel/.private/catkin_tools_prebuild/setup.bash

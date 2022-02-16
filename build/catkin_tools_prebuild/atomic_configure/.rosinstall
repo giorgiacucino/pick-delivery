@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/me/progetto_labiagi/devel/.private/catkin_tools_prebuild/setup.sh
+    local-name: /home/me/lab/devel/.private/catkin_tools_prebuild/setup.sh

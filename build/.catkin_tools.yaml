@@ -1,6 +1,6 @@
-devel_space: /home/me/progetto_labiagi/devel
+devel_space: /home/me/lab/devel
 install: false
-install_space: /home/me/progetto_labiagi/install
+install_space: /home/me/lab/install
 profile: default
-source_space: /home/me/progetto_labiagi/src
-workspace: /home/me/progetto_labiagi
+source_space: /home/me/lab/src
+workspace: /home/me/lab

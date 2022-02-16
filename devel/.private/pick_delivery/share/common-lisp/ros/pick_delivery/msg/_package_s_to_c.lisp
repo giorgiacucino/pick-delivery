@@ -1,4 +1,10 @@
 (cl:in-package pick_delivery-msg)
-(cl:export '(MSGS-VAL
+(cl:export '(SENDER-VAL
+          SENDER
+          RECEIVER-VAL
+          RECEIVER
+          MSGS-VAL
           MSGS
+          MSGR-VAL
+          MSGR
 ))

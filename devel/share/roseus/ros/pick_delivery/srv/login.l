@@ -1,1 +1,1 @@
-/home/me/progetto_labiagi/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l
+/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l

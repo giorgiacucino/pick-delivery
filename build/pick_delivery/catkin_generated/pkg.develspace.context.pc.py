@@ -1,8 +1,8 @@
 # generated from catkin/cmake/template/pkg.context.pc.in
 CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/me/progetto_labiagi/devel/.private/pick_delivery/include".split(';') if "/home/me/progetto_labiagi/devel/.private/pick_delivery/include" != "" else []
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/me/lab/devel/.private/pick_delivery/include".split(';') if "/home/me/lab/devel/.private/pick_delivery/include" != "" else []
 PROJECT_CATKIN_DEPENDS = "message_runtime;roscpp;rospy;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "pick_delivery"
-PROJECT_SPACE_DIR = "/home/me/progetto_labiagi/devel/.private/pick_delivery"
+PROJECT_SPACE_DIR = "/home/me/lab/devel/.private/pick_delivery"
 PROJECT_VERSION = "0.0.0"

@@ -43,67 +43,67 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/me/progetto_labiagi/src/pick_delivery
+CMAKE_SOURCE_DIR = /home/me/lab/src/pick_delivery
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/pick_delivery
+CMAKE_BINARY_DIR = /home/me/lab/build/pick_delivery
 
 # Utility rule file for pick_delivery_generate_messages_py.
 
 # Include the progress variables for this target.
 include CMakeFiles/pick_delivery_generate_messages_py.dir/progress.make
 
-CMakeFiles/pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
-CMakeFiles/pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
-CMakeFiles/pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
-CMakeFiles/pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
-CMakeFiles/pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py
-CMakeFiles/pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py
+CMakeFiles/pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
+CMakeFiles/pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
+CMakeFiles/pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
+CMakeFiles/pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
+CMakeFiles/pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py
+CMakeFiles/pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py
 
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py: /home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG pick_delivery/c_to_s"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/me/progetto_labiagi/src/pick_delivery/msg/c_to_s.msg -Ipick_delivery:/home/me/progetto_labiagi/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py: /home/me/lab/src/pick_delivery/msg/c_to_s.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG pick_delivery/c_to_s"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/me/lab/src/pick_delivery/msg/c_to_s.msg -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py: /home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG pick_delivery/s_to_c"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/me/progetto_labiagi/src/pick_delivery/msg/s_to_c.msg -Ipick_delivery:/home/me/progetto_labiagi/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py: /home/me/lab/src/pick_delivery/msg/s_to_c.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG pick_delivery/s_to_c"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/me/lab/src/pick_delivery/msg/s_to_c.msg -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py: /home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV pick_delivery/invio"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/me/progetto_labiagi/src/pick_delivery/srv/invio.srv -Ipick_delivery:/home/me/progetto_labiagi/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py: /home/me/lab/src/pick_delivery/srv/invio.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV pick_delivery/invio"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/me/lab/src/pick_delivery/srv/invio.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py: /home/me/progetto_labiagi/src/pick_delivery/srv/login.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV pick_delivery/login"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/me/progetto_labiagi/src/pick_delivery/srv/login.srv -Ipick_delivery:/home/me/progetto_labiagi/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py: /home/me/lab/src/pick_delivery/srv/login.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV pick_delivery/login"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/me/lab/src/pick_delivery/srv/login.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for pick_delivery"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg --initpy
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for pick_delivery"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg --initpy
 
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
-/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/progetto_labiagi/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for pick_delivery"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv --initpy
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for pick_delivery"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv --initpy
 
 pick_delivery_generate_messages_py: CMakeFiles/pick_delivery_generate_messages_py
-pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
-pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
-pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
-pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
-pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py
-pick_delivery_generate_messages_py: /home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py
+pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_c_to_s.py
+pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/_s_to_c.py
+pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
+pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py
+pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/msg/__init__.py
+pick_delivery_generate_messages_py: /home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py
 pick_delivery_generate_messages_py: CMakeFiles/pick_delivery_generate_messages_py.dir/build.make
 
 .PHONY : pick_delivery_generate_messages_py
@@ -118,6 +118,6 @@ CMakeFiles/pick_delivery_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/pick_delivery_generate_messages_py.dir/clean
 
 CMakeFiles/pick_delivery_generate_messages_py.dir/depend:
-	cd /home/me/progetto_labiagi/build/pick_delivery && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/me/progetto_labiagi/src/pick_delivery /home/me/progetto_labiagi/src/pick_delivery /home/me/progetto_labiagi/build/pick_delivery /home/me/progetto_labiagi/build/pick_delivery /home/me/progetto_labiagi/build/pick_delivery/CMakeFiles/pick_delivery_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/me/lab/build/pick_delivery && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/me/lab/src/pick_delivery /home/me/lab/src/pick_delivery /home/me/lab/build/pick_delivery /home/me/lab/build/pick_delivery /home/me/lab/build/pick_delivery/CMakeFiles/pick_delivery_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pick_delivery_generate_messages_py.dir/depend
 

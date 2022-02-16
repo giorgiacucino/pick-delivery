@@ -9,11 +9,13 @@ class robot
 		float	distance;
 		int		free;
 		int		arrived;
+		int		has_pack;
 	robot(string s, int f)
 	{
 		status = s;
 		free = f;
 		distance = 0;
 		arrived = 0;
+		has_pack = 0;
 	}
 };

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/me/progetto_labiagi/src/pick_delivery
+CMAKE_SOURCE_DIR = /home/me/lab/src/pick_delivery
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/me/progetto_labiagi/build/pick_delivery
+CMAKE_BINARY_DIR = /home/me/lab/build/pick_delivery
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/progetto_labiagi/build/pick_delivery/CMakeFiles /home/me/progetto_labiagi/build/pick_delivery/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles /home/me/lab/build/pick_delivery/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/progetto_labiagi/build/pick_delivery/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

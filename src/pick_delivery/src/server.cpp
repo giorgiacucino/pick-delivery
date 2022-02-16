@@ -14,9 +14,10 @@
 
 list<user>					userlist;
 list<aula>					aulelist;
-string						sender;
-string						receiver;
-string						auladest;
+user*						sender;
+user*						receiver;
+aula*						auladest;
+int							broadcast;
 int							need_to_serve = 0;
 pick_delivery::s_to_c		msc;
 geometry_msgs::PoseStamped	goal;
@@ -86,6 +87,43 @@ bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Res
 	return (true);
 }
 
+void	block_all_users(aula a)
+{
+	for (auto& u : userlist)
+	{
+		if (u.x == a.x && u.y == a.y)
+			u.can_logout = 0;
+	}
+}
+
+void	get_infos(string sen, string recv, string auladst)
+{
+	broadcast = 0;
+	if (recv == "0")
+		broadcast = 1;
+	for (auto& u : userlist)
+	{
+		if (u.hash == sen)
+		{
+			sender = &u;
+			(*sender).can_logout = 0;
+		}
+		if (broadcast == 0 && u.hash == recv)
+		{
+			receiver = &u;
+			(*receiver).can_logout = 0;
+		}
+	}
+
+	for (auto& a : aulelist)
+	{
+		if (a.name == auladst)
+			auladest = &a;
+	}
+	if (broadcast == 1)
+		block_all_users(*auladest);
+}
+
 bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Response &res)
 {
 	res.serv_resp = 0;
@@ -132,10 +170,7 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 		else if (room == 1 && person == 1)
 		{
 			res.serv_resp = 1;
-			
-			sender = req.sender;
-			receiver = req.receiver;
-			auladest = req.aula;
+			get_infos(req.sender, req.receiver, req.aula);
 			need_to_serve = 1;
 		}
 	}
@@ -149,22 +184,6 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 	if (rob.distance < 0.5)
 	{
 		cout << "[INFO] Il robot è arrivato a destinazione" << endl;
-		rob.arrived = 1;
-	}
-}
-
-void	block_all_users(string aula)
-{
-	for (auto& a : aulelist)
-	{
-		if (a.name == aula)
-		{
-			for (auto& u : userlist)
-			{
-				if (u.x == a.x && u.y == a.y)
-					u.can_logout = 0;
-			}
-		}
 	}
 }
 
@@ -199,29 +218,40 @@ int	main(int argc, char **argv)
 	{
 		if (need_to_serve == 1)
 		{
-			cout << "[INFO] Devo servire " << sender << endl;
-			int	coordx;
-			int coordy;
-			for (auto& u : userlist)
-			{
-				if (u.hash == sender || u.hash == receiver)
-					u.can_logout = 0;
-				if (u.hash == sender)
-				{
-					coordx = u.x;
-					coordy = u.y;
-				}
-			}
-			if (receiver == "0")
-				block_all_users(auladest);
+			cout << "[INFO] Devo servire " << (*sender).hash << endl;
 			goal.header.stamp = ros::Time::now();
 			goal.header.frame_id = "map";
-			goal.pose.position.x = coordx;
-			goal.pose.position.y = coordy;
+			goal.pose.position.x = (*sender).x;
+			goal.pose.position.y = (*sender).y;
 			pub_robot.publish(goal);
-			cout << coordx << " " << coordy << endl;
 			ros::spinOnce();
 			need_to_serve = 0;
+			rob.arrived = 0;
+			rob.has_pack = !rob.has_pack;
+		}
+		if (rob.arrived == 1 && rob.has_pack == 0)
+		{
+			msc.sender = (*sender).hash;
+			msc.receiver = (*receiver).hash;
+			msc.msgs = "il robot ha preso in consegna il pacco";
+			msc.msgr = "sta arrivando un pacco per te";
+			pub_client.publish(msc);
+			ros::spinOnce();
+			need_to_serve = 1;
+			sender = receiver;
+			receiver = NULL;
+			rob.has_pack = 1;
+		}
+		else if (rob.arrived == 1)
+		{
+			msc.sender = (*sender).hash;
+			msc.receiver = "";
+			msc.msgs = "é arrivato il pacco per te";
+			pub_client.publish(msc);
+			ros::spinOnce();
+			sender = NULL;
+			receiver = NULL;
+			rob.has_pack = 0;
 		}
 		ros::spinOnce();
 	}
