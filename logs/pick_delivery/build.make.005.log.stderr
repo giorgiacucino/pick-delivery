@@ -1,0 +1,36 @@
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:9:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+ [01;31m[Kstring[m[K     name;
+ [01;31m[K^~~~~~[m[K
+ [32m[Kstdin[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:23:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kname[m[K’ was not declared in this scope
+  cout << "Benvenuto al Diag! Digita il tuo username: "; cin >> [01;31m[Kname[m[K;
+                                                                [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:23:64:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Knode[m[K’
+  cout << "Benvenuto al Diag! Digita il tuo username: "; cin >> [01;36m[Kname[m[K;
+                                                                [01;36m[K^~~~[m[K
+                                                                [32m[Knode[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:28:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct pick_delivery::login[m[K’ has no member named ‘[01m[Kres[m[K’
+   cout << "Ciao " << msglog.[01;31m[Kres[m[K << "! Attualmente sei nell'atrio. Dove vorresti andare?" << endl;
+                             [01;31m[K^~~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:9:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kvoid[m[K’
+ *[01;31m[Kvoid[m[K handle_client(pick_delivery::login::Request &req, pick_delivery::login::Response &res)
+  [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:9:2:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[Kvoid[m[K’
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+  servLog = [01;31m[Kn[m[K.advertiseService("/newclient", handle_client);
+            [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:12:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+  servLog = [01;36m[Kn[m[K.advertiseService("/newclient", handle_client);
+            [01;36m[K^[m[K
+            [32m[Kyn[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:45:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_client[m[K’ was not declared in this scope
+  servLog = n.advertiseService("/newclient", [01;31m[Khandle_client[m[K);
+                                             [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,108 @@
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:9:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+ [01;31m[Kstring[m[K     name;
+ [01;31m[K^~~~~~[m[K
+ [32m[Kstdin[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:23:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kname[m[K’ was not declared in this scope
+  cout << "Benvenuto al Diag! Digita il tuo username: "; cin >> [01;31m[Kname[m[K;
+                                                                [01;31m[K^~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:23:64:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Knode[m[K’
+  cout << "Benvenuto al Diag! Digita il tuo username: "; cin >> [01;36m[Kname[m[K;
+                                                                [01;36m[K^~~~[m[K
+                                                                [32m[Knode[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kvoid handle_client(pick_delivery::login::Request&, pick_delivery::login::Response&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:21:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ks[m[K’ was not declared in this scope
+  user us = user([01;31m[Ks[m[K, count);
+                 [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:21:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kus[m[K’
+  user us = user([01;36m[Ks[m[K, count);
+                 [01;36m[K^[m[K
+                 [32m[Kus[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertiseService(const char [11], void (&)(pick_delivery::login::Request&, pick_delivery::login::Response&))[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;31m[K)[m[K;
+                                                             [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:879:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(MReq&, MRes&), T*)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(MReq &, MRes &), T *obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:879:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kbool (T::*)(MReq&, MRes&)[m[K’ and ‘[01m[Kvoid (*)(pick_delivery::login::Request&, pick_delivery::login::Response&) {aka void (*)(pick_delivery::loginRequest_<std::allocator<void> >&, pick_delivery::loginResponse_<std::allocator<void> >&)}[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:924:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(ros::ServiceEvent<MReq, MRes>&), T*)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(ServiceEvent<MReq, MRes>&), T *obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:924:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kbool (T::*)(ros::ServiceEvent<MReq, MRes>&)[m[K’ and ‘[01m[Kvoid (*)(pick_delivery::login::Request&, pick_delivery::login::Response&) {aka void (*)(pick_delivery::loginRequest_<std::allocator<void> >&, pick_delivery::loginResponse_<std::allocator<void> >&)}[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:970:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(MReq&, MRes&), const boost::shared_ptr<X>&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(MReq &, MRes &), const boost::shared_ptr<T>& obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:970:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kbool (T::*)(MReq&, MRes&)[m[K’ and ‘[01m[Kvoid (*)(pick_delivery::login::Request&, pick_delivery::login::Response&) {aka void (*)(pick_delivery::loginRequest_<std::allocator<void> >&, pick_delivery::loginResponse_<std::allocator<void> >&)}[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1017:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(ros::ServiceEvent<MReq, MRes>&), const boost::shared_ptr<X>&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(ServiceEvent<MReq, MRes>&), const boost::shared_ptr<T>& obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1017:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kbool (T::*)(ros::ServiceEvent<MReq, MRes>&)[m[K’ and ‘[01m[Kvoid (*)(pick_delivery::login::Request&, pick_delivery::login::Response&) {aka void (*)(pick_delivery::loginRequest_<std::allocator<void> >&, pick_delivery::loginResponse_<std::allocator<void> >&)}[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1061:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (*)(MReq&, MRes&))
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(*srv_func)(MReq&, MRes&))
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1061:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kbool[m[K’ and ‘[01m[Kvoid[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1104:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (*)(ros::ServiceEvent<MReq, MRes>&))
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(*srv_func)(ServiceEvent<MReq, MRes>&))
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1104:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kbool[m[K’ and ‘[01m[Kvoid[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1145:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, const boost::function<bool(MReq&, MRes&)>&, const VoidConstPtr&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, const boost::function<bool(MReq&, MRes&)>& callback,
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1145:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst boost::function<bool(MReq&, MRes&)>[m[K’ and ‘[01m[Kvoid(pick_delivery::login::Request&, pick_delivery::login::Response&) {aka void(pick_delivery::loginRequest_<std::allocator<void> >&, pick_delivery::loginResponse_<std::allocator<void> >&)}[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1190:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class S> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, const boost::function<bool(S&)>&, const VoidConstPtr&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, const boost::function<bool(S&)>& callback,
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1190:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:33:61:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst boost::function<bool(S&)>[m[K’ and ‘[01m[Kvoid(pick_delivery::login::Request&, pick_delivery::login::Response&) {aka void(pick_delivery::loginRequest_<std::allocator<void> >&, pick_delivery::loginResponse_<std::allocator<void> >&)}[m[K’
+  servLog = node.advertiseService("/newclient", handle_client[01;36m[K)[m[K;
+                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1222:17:[m[K [01;36m[Knote: [m[Kcandidate: ros::ServiceServer ros::NodeHandle::advertiseService(ros::AdvertiseServiceOptions&)
+   ServiceServer [01;36m[KadvertiseService[m[K(AdvertiseServiceOptions& ops);
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1222:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+make[2]: *** [CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2

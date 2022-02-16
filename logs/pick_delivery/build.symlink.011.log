@@ -1,0 +1,30 @@
+Symlinking /home/me/progetto_labiagi/devel/include/pick_delivery/invioResponse.h
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/loginRequest.h, /home/me/progetto_labiagi/devel/include/pick_delivery/loginRequest.h)
+Symlinking /home/me/progetto_labiagi/devel/include/pick_delivery/invioRequest.h
+Symlinking /home/me/progetto_labiagi/devel/include/pick_delivery/invio.h
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/loginResponse.h, /home/me/progetto_labiagi/devel/include/pick_delivery/loginResponse.h)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/include/pick_delivery/login.h, /home/me/progetto_labiagi/devel/include/pick_delivery/login.h)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/pick_delivery/server, /home/me/progetto_labiagi/devel/lib/pick_delivery/server)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/pick_delivery/client, /home/me/progetto_labiagi/devel/lib/pick_delivery/client)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/pkgconfig/pick_delivery.pc, /home/me/progetto_labiagi/devel/lib/pkgconfig/pick_delivery.pc)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/__init__.py, /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/pick_delivery/__init__.py)
+Symlinking /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/pick_delivery/srv/_invio.py
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_login.py, /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/pick_delivery/srv/_login.py)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py, /home/me/progetto_labiagi/devel/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_delivery-msg-paths.cmake, /home/me/progetto_labiagi/devel/share/pick_delivery/cmake/pick_delivery-msg-paths.cmake)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_deliveryConfig.cmake, /home/me/progetto_labiagi/devel/share/pick_delivery/cmake/pick_deliveryConfig.cmake)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_delivery-msg-extras.cmake, /home/me/progetto_labiagi/devel/share/pick_delivery/cmake/pick_delivery-msg-extras.cmake)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_deliveryConfig-version.cmake, /home/me/progetto_labiagi/devel/share/pick_delivery/cmake/pick_deliveryConfig-version.cmake)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l, /home/me/progetto_labiagi/devel/share/roseus/ros/pick_delivery/manifest.l)
+Symlinking /home/me/progetto_labiagi/devel/share/roseus/ros/pick_delivery/srv/invio.l
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l, /home/me/progetto_labiagi/devel/share/roseus/ros/pick_delivery/srv/login.l)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/_index.js, /home/me/progetto_labiagi/devel/share/gennodejs/ros/pick_delivery/_index.js)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/login.js, /home/me/progetto_labiagi/devel/share/gennodejs/ros/pick_delivery/srv/login.js)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/_index.js, /home/me/progetto_labiagi/devel/share/gennodejs/ros/pick_delivery/srv/_index.js)
+Symlinking /home/me/progetto_labiagi/devel/share/gennodejs/ros/pick_delivery/srv/invio.js
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/_package.lisp, /home/me/progetto_labiagi/devel/share/common-lisp/ros/pick_delivery/srv/_package.lisp)
+Symlinking /home/me/progetto_labiagi/devel/share/common-lisp/ros/pick_delivery/srv/_package_invio.lisp
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/login.lisp, /home/me/progetto_labiagi/devel/share/common-lisp/ros/pick_delivery/srv/login.lisp)
+Symlinking /home/me/progetto_labiagi/devel/share/common-lisp/ros/pick_delivery/srv/invio.lisp
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/pick_delivery-srv.asd, /home/me/progetto_labiagi/devel/share/common-lisp/ros/pick_delivery/srv/pick_delivery-srv.asd)
+Linked: (/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/_package_login.lisp, /home/me/progetto_labiagi/devel/share/common-lisp/ros/pick_delivery/srv/_package_login.lisp)

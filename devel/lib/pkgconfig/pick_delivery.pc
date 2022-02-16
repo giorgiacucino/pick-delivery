@@ -1,0 +1,1 @@
+/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/pkgconfig/pick_delivery.pc

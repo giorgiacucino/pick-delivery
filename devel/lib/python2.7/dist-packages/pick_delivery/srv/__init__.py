@@ -1,0 +1,1 @@
+/home/me/progetto_labiagi/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/__init__.py

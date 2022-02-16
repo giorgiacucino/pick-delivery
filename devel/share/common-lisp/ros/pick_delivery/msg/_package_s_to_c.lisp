@@ -1,0 +1,1 @@
+/home/me/progetto_labiagi/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/_package_s_to_c.lisp

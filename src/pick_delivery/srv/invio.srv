@@ -1,0 +1,5 @@
+string sender
+string aula
+string receiver
+---
+int64 serv_resp

@@ -1,0 +1,23 @@
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kbool handle_client(pick_delivery::login::Request&, pick_delivery::login::Response&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:59:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
+       u.x = [01;31m[Kx[m[K;
+             [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:60:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope
+       u.y = [01;31m[Ky[m[K;
+             [01;31m[K^[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kbool handle_invio(pick_delivery::invio::Request&, pick_delivery::invio::Response&)[m[K’:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:79:11:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K->[m[K’ token
+  if (robot[01;31m[K->[m[Kfree == 0)
+           [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:[m[K At global scope:
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:113:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ksrrg2_core_ros[m[K’ does not name a type
+ void check_robot(const [01;31m[Ksrrg2_core_ros[m[K::PlannerStatusMessage::ConstPtr& info)
+                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:113:60:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+ void check_robot(const srrg2_core_ros::PlannerStatusMessage[01;31m[K::[m[KConstPtr& info)
+                                                            [01;31m[K^~[m[K
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:113:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:113:60:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2

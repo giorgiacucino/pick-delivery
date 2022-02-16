@@ -1,0 +1,8 @@
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Kpick_delivery/users.h: No such file or directory
+ #include [01;31m[K"pick_delivery/users.h"[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

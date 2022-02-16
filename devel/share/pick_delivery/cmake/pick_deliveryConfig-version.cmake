@@ -1,0 +1,1 @@
+/home/me/progetto_labiagi/devel/.private/pick_delivery/share/pick_delivery/cmake/pick_deliveryConfig-version.cmake

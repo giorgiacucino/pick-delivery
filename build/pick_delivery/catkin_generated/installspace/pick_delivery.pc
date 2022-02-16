@@ -1,0 +1,8 @@
+prefix=/home/me/progetto_labiagi/install
+
+Name: pick_delivery
+Description: Description of pick_delivery
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime roscpp rospy std_msgs

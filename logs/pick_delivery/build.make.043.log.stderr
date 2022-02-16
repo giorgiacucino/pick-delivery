@@ -1,0 +1,21 @@
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/server.cpp:13:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/PoseStamped: No such file or directory
+ #include [01;31m[K<geometry_msgs/PoseStamped>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/opt/ros/melodic/include/ros/subscription_callback_helper.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/subscriber.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:33[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:1[m[K:
+/opt/ros/melodic/include/ros/parameter_adapter.h: In instantiation of ‘[01m[Kstatic ros::ParameterAdapter<M>::Parameter ros::ParameterAdapter<M>::getParameter(const Event&) [with M = pick_delivery::s_to_c_<std::allocator<void> >&; ros::ParameterAdapter<M>::Parameter = pick_delivery::s_to_c_<std::allocator<void> >&; ros::ParameterAdapter<M>::Event = ros::MessageEvent<const pick_delivery::s_to_c_<std::allocator<void> > >; typename boost::remove_reference<typename boost::remove_const<M>::type>::type = pick_delivery::s_to_c_<std::allocator<void> >][m[K’:
+[01m[K/opt/ros/melodic/include/ros/subscription_callback_helper.h:144:48:[m[K   required from ‘[01m[Kvoid ros::SubscriptionCallbackHelperT<P, Enabled>::call(ros::SubscriptionCallbackHelperCallParams&) [with P = pick_delivery::s_to_c_<std::allocator<void> >&; Enabled = void][m[K’
+[01m[K/home/me/progetto_labiagi/src/pick_delivery/src/client.cpp:196:1:[m[K   required from here
+[01m[K/opt/ros/melodic/include/ros/parameter_adapter.h:78:30:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kros::ParameterAdapter<pick_delivery::s_to_c_<std::allocator<void> >&>::Parameter {aka pick_delivery::s_to_c_<std::allocator<void> >&}[m[K’ to ‘[01m[Kconst pick_delivery::s_to_c_<std::allocator<void> >[m[K’ discards qualifiers
+     return *event.getMessage([01;31m[K)[m[K;
+                              [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/client.dir/all] Error 2
+make: *** [all] Error 2

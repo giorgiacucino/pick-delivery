@@ -1,0 +1,12 @@
+Symlinking /home/me/progetto_labiagi/devel/./local_setup.bash
+Symlinking /home/me/progetto_labiagi/devel/./local_setup.zsh
+Symlinking /home/me/progetto_labiagi/devel/./_setup_util.py
+Symlinking /home/me/progetto_labiagi/devel/./setup.sh
+Symlinking /home/me/progetto_labiagi/devel/./env.sh
+Symlinking /home/me/progetto_labiagi/devel/./setup.bash
+Symlinking /home/me/progetto_labiagi/devel/./setup.zsh
+Symlinking /home/me/progetto_labiagi/devel/./cmake.lock
+Symlinking /home/me/progetto_labiagi/devel/./local_setup.sh
+Symlinking /home/me/progetto_labiagi/devel/lib/pkgconfig/catkin_tools_prebuild.pc
+Symlinking /home/me/progetto_labiagi/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig-version.cmake
+Symlinking /home/me/progetto_labiagi/devel/share/catkin_tools_prebuild/cmake/catkin_tools_prebuildConfig.cmake
