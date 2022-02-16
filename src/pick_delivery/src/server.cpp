@@ -21,7 +21,7 @@ int							broadcast;
 int							need_to_serve = 0;
 pick_delivery::s_to_c		msc;
 geometry_msgs::PoseStamped	goal;
-robot						rob = robot("inizio", 1);
+robot						rob = robot(0, 1);
 ros::ServiceServer			servLog;
 ros::ServiceServer			servSend;
 ros::Publisher				pub_client;
@@ -129,6 +129,28 @@ void	get_infos(string sen, string recv, string auladst)
 		block_all_users(*auladest);
 }
 
+void	set_goal()
+{
+	int	coordx;
+	int coordy;
+	if (rob.status == 1)
+	{
+		coordx = (*sender).x;
+		coordy = (*sender).y;
+	}
+	else if (rob.status == 2)
+	{
+		coordx = (*auladest).x;
+		coordy = (*auladest).y;
+	}
+	goal.header.stamp = ros::Time::now();
+	goal.header.frame_id = "map";
+	goal.pose.position.x = coordx;
+	goal.pose.position.y = coordy;
+	pub_robot.publish(goal);
+	ros::spinOnce();
+}
+
 bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Response &res)
 {
 	res.serv_resp = 0;
@@ -176,18 +198,8 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 		{
 			res.serv_resp = 1;
 			get_infos(req.sender, req.receiver, req.aula);
-			cout << "[INFO] Devo servire " << (*sender).hash << endl;
-			if (req.receiver != "0")
-			{
-				cout << "[INFO] Devo servire " << (*receiver).hash << endl;
-			}
-			cout << "[INFO] Devo servire " << (*auladest).name << endl;
-			goal.header.stamp = ros::Time::now();
-			goal.header.frame_id = "map";
-			goal.pose.position.x = (*sender).x;
-			goal.pose.position.y = (*sender).y;
-			pub_robot.publish(goal);
-			ros::spinOnce();
+			rob.status = 1;
+			set_goal();
 		}
 	}
 	return (true);
@@ -202,7 +214,11 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 		if (rob.distance == rob.prevdist && rob.distance != 0)
 		{
 			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
-			rob.arrived++;
+			if (rob.status == 2)
+				rob.status = 0;
+			else
+				rob.status++;
+			set_goal();
 		}
 	}
 	rob.prevdist = info->distance_to_global_goal;

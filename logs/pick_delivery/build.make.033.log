@@ -6,8 +6,8 @@
 [  0%] Built target _pick_delivery_generate_messages_check_deps_s_to_c
 [  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
 [ 14%] Built target pick_delivery_generate_messages_cpp
-[ 14%] Built target std_msgs_generate_messages_eus
 [ 37%] Built target pick_delivery_generate_messages_py
 [ 51%] Built target pick_delivery_generate_messages_nodejs
 [ 66%] Built target pick_delivery_generate_messages_lisp

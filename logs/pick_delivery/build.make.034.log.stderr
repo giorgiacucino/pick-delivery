@@ -1,0 +1,33 @@
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kvoid check_robot(const ConstPtr&)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:193:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_goal[m[K’ was not declared in this scope
+    [01;31m[Kset_goal[m[K();
+    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:193:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kgoal[m[K’
+    [01;36m[Kset_goal[m[K();
+    [01;36m[K^~~~~~~~[m[K
+    [32m[Kgoal[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kvoid set_goal()[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:215:18:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   coordx = (*aula[01;31m[K)[m[K.x;
+                  [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:216:18:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   coordy = (*aula[01;31m[K)[m[K.y;
+                  [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:246:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_goal_user[m[K’ was not declared in this scope
+    [01;31m[Kset_goal_user[m[K(*sender);
+    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:246:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kset_goal[m[K’
+    [01;36m[Kset_goal_user[m[K(*sender);
+    [01;36m[K^~~~~~~~~~~~~[m[K
+    [32m[Kset_goal[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:251:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_goal_aula[m[K’ was not declared in this scope
+    [01;31m[Kset_goal_aula[m[K(*auladest);
+    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:251:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kset_goal[m[K’
+    [01;36m[Kset_goal_aula[m[K(*auladest);
+    [01;36m[K^~~~~~~~~~~~~[m[K
+    [32m[Kset_goal[m[K
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2
