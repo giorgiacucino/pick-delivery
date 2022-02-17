@@ -125,13 +125,14 @@ void	get_infos(string sen, string recv, string auladst)
 void callClient()
 {
 	client_called = 1;
+	cout << "stato attuale del robot: " << rob.status << endl;
 	if (rob.status == 0)
 		return ;
 	else if (rob.status == 1)
 	{
 		n.request.user = (*sender).hash;
 		n.request.auladest = "";
-		n.request.msg = "è arrivato il robot, consegna il pacco";
+		n.request.msg = "E' arrivato il robot e ha preso in consegna il pacco";
 	}
 	else if (rob.status == 2)
 	{
@@ -140,8 +141,9 @@ void callClient()
 		else
 			n.request.user = (*receiver).hash;
 		n.request.auladest = (*auladest).name;
-		n.request.msg = "c'è un pacco per te, ritiralo";
+		n.request.msg = "C'è un pacco per te, ritiralo";
 	}
+	cout << "[INFO] Aspetto risposta dal client..." << endl;
 	while (notifyClient.call(n) == 0);
 	rob.status = n.response.picked;
 }
@@ -171,6 +173,7 @@ void	set_goal()
 	pub_robot.publish(goal);
 	client_called = 0;
 	ros::spinOnce();
+	cout << "Il goal è stato settato a: " << coordx << " " << coordy << endl;
 }
 
 bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Response &res)
@@ -222,8 +225,8 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 			get_infos(req.sender, req.receiver, req.aula);
 			cout << "[INFO] Richiesta di pick&delivery accettata" << endl;
 			cout << "sender: " << (*sender).hash << endl;
-			cout << "sender: " << req.receiver << endl;
-			cout << "sender: " << (*auladest).name << endl;
+			cout << "receiver: " << req.receiver << endl;
+			cout << "aula: " << (*auladest).name << endl;
 			rob.status = 1;
 			cout << "[INFO] Settando un nuovo goal..." << endl;
 			set_goal();
@@ -239,15 +242,13 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 	cout << "[INFO] La distanza dal goal è: " << rob.distance << endl;
 	if (rob.distance < 0.7)
 	{
-		if (rob.distance == rob.prevdist && rob.distance != 0)
+		if (rob.distance == rob.prevdist && rob.distance != 0 && client_called == 0)
 		{
 			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
-			if (client_called == 0)
-			{
-				callClient();
-				cout << "[INFO] Settando un nuovo goal..." << endl;
-				set_goal();
-			}
+			cout << "[INFO] Sto chiamando il client..." << endl;
+			callClient();
+			cout << "[INFO] Settando un nuovo goal..." << endl;
+			set_goal();
 		}
 	}
 	rob.prevdist = info->distance_to_global_goal;

@@ -211,7 +211,7 @@ int main(int argc, char **argv)
 		cout << endl;
 		cout << "Aspettando il robot..." << endl;
 		ros::Duration(10).sleep();
-		ros::spinOnce();
+		ros::spin();
 		if (scelta == 3)
 		{
 			cout << "Vuoi ancora aspettare? (y/n)" << endl;
