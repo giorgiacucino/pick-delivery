@@ -1,0 +1,1 @@
+/home/me/lab/devel/.private/pick_delivery/lib/python2.7/dist-packages/pick_delivery/srv/_notifica.py

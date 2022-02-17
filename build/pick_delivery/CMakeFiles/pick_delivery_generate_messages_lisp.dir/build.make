@@ -56,6 +56,7 @@ include CMakeFiles/pick_delivery_generate_messages_lisp.dir/progress.make
 CMakeFiles/pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/c_to_s.lisp
 CMakeFiles/pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/s_to_c.lisp
 CMakeFiles/pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/invio.lisp
+CMakeFiles/pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/notifica.lisp
 CMakeFiles/pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/login.lisp
 
 
@@ -74,15 +75,21 @@ CMakeFiles/pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pic
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from pick_delivery/invio.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/me/lab/src/pick_delivery/srv/invio.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv
 
+/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/notifica.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/notifica.lisp: /home/me/lab/src/pick_delivery/srv/notifica.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from pick_delivery/notifica.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/me/lab/src/pick_delivery/srv/notifica.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv
+
 /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/login.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/login.lisp: /home/me/lab/src/pick_delivery/srv/login.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from pick_delivery/login.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from pick_delivery/login.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/me/lab/src/pick_delivery/srv/login.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv
 
 pick_delivery_generate_messages_lisp: CMakeFiles/pick_delivery_generate_messages_lisp
 pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/c_to_s.lisp
 pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/s_to_c.lisp
 pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/invio.lisp
+pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/notifica.lisp
 pick_delivery_generate_messages_lisp: /home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/login.lisp
 pick_delivery_generate_messages_lisp: CMakeFiles/pick_delivery_generate_messages_lisp.dir/build.make
 

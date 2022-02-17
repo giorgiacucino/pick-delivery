@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/c_to_s.h"
   "/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/s_to_c.h"
   "/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invio.h"
+  "/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h"
   "/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h"
 )
 

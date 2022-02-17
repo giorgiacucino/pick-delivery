@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/msg/c_to_s.l"
   "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/msg/s_to_c.l"
   "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/invio.l"
+  "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/notifica.l"
   "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l"
   "/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l"
 )

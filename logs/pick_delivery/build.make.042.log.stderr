@@ -1,0 +1,14 @@
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:[m[K In function ‘[01m[Kbool handle_notifica(pick_delivery::notifica::Request&, pick_delivery::notifica::Response&)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:27:27:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator&&[m[K’ (operand types are ‘[01m[Kbool[m[K’ and ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’)
+  if ([01;31m[K(req.auladest == "") && (req.user = name)[m[K)
+      [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:27:27:[m[K [01;36m[Knote: [m[Kcandidate: operator&&(bool, bool) <built-in>
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:27:27:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’ to ‘[01m[Kbool[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:32:38:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator&&[m[K’ (operand types are ‘[01m[K__gnu_cxx::__enable_if<true, bool>::__type {aka bool}[m[K’ and ‘[01m[Kpick_delivery::notificaRequest_<std::allocator<void> >::_user_type {aka std::__cxx11::basic_string<char>}[m[K’)
+  else if ([01;31m[Kreq.auladest == aulaclient && req.user[m[K = "0")
+           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:32:38:[m[K [01;36m[Knote: [m[Kcandidate: operator&&(__gnu_cxx::__enable_if<true, bool>::__type {aka bool}, bool) <built-in>
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:32:38:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kpick_delivery::notificaRequest_<std::allocator<void> >::_user_type {aka std::__cxx11::basic_string<char>}[m[K’ to ‘[01m[Kbool[m[K’
+make[2]: *** [CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/client.dir/all] Error 2
+make: *** [all] Error 2

@@ -7,8 +7,7 @@
 #include "pick_delivery/login.h"
 #include "/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h"
 #include "pick_delivery/invio.h"
-#include "pick_delivery/s_to_c.h"
-#include "pick_delivery/c_to_s.h"
+#include "pick_delivery/notifica.h"
 #include <fstream>
 #include <geometry_msgs/PoseStamped.h>
 
@@ -18,14 +17,13 @@ user*						sender;
 user*						receiver;
 aula*						auladest;
 int							broadcast;
-int							need_to_serve = 0;
-pick_delivery::s_to_c		msc;
+int							client_called = 0;
+pick_delivery::notifica		n;
 geometry_msgs::PoseStamped	goal;
 robot						rob = robot(0, 1);
 ros::ServiceServer			servLog;
 ros::ServiceServer			servSend;
-ros::Publisher				pub_client;
-ros::Subscriber				sub_client;
+ros::ServiceClient			notifyClient;
 ros::Publisher				pub_robot;
 ros::Subscriber				sub_robot;
 
@@ -33,19 +31,14 @@ bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Res
 {
 	if (req.type_service == 0)
 	{
-		int	rem;
-		rem = 0;
 		for (auto& u : userlist)
 		{
 			if (u.hash == req.name && u.can_logout == 1)
 			{
 				userlist.remove(u);
-				rem = 1;
 				res.serv_resp = "bye bye!";
-				break ;
 			}
 		}
-		return (rem);
 	}
 	if (req.type_service == 1)
 	{
@@ -92,12 +85,12 @@ bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Res
 	return (true);
 }
 
-void	block_all_users(aula a)
+void	log_all_users(aula a, int log)
 {
 	for (auto& u : userlist)
 	{
 		if (u.x == a.x && u.y == a.y)
-			u.can_logout = 1;
+			u.can_logout = log;
 	}
 }
 
@@ -111,12 +104,12 @@ void	get_infos(string sen, string recv, string auladst)
 		if (u.hash == sen)
 		{
 			sender = &u;
-			(*sender).can_logout = 1;
+			(*sender).can_logout = 0;
 		}
 		if (broadcast == 0 && u.hash == recv)
 		{
 			receiver = &u;
-			(*receiver).can_logout = 1;
+			(*receiver).can_logout = 0;
 		}
 	}
 
@@ -126,20 +119,48 @@ void	get_infos(string sen, string recv, string auladst)
 			auladest = &a;
 	}
 	if (broadcast == 1)
-		block_all_users(*auladest);
+		log_all_users(*auladest, 0);
+}
+
+void callClient()
+{
+	client_called = 1;
+	if (rob.status == 0)
+		return ;
+	else if (rob.status == 1)
+	{
+		n.request.user = (*sender).hash;
+		n.request.auladest = "";
+		n.request.msg = "è arrivato il robot, consegna il pacco";
+	}
+	else if (rob.status == 2)
+	{
+		if (broadcast == 1)
+			n.request.user = "";
+		else
+			n.request.user = (*receiver).hash;
+		n.request.auladest = (*auladest).name;
+		n.request.msg = "c'è un pacco per te, ritiralo";
+	}
+	while (notifyClient.call(n) == 0);
+	rob.status = n.response.picked;
 }
 
 void	set_goal()
 {
 	int	coordx;
 	int coordy;
+	if (rob.status == 0)
+		//log_all_users(*auladest, 1);
+		return ;
 	if (rob.status == 1)
 	{
 		coordx = (*sender).x;
 		coordy = (*sender).y;
 	}
-	else if (rob.status == 2)
+	if (rob.status == 2)
 	{
+		//(*sender).can_logout = 1;
 		coordx = (*auladest).x;
 		coordy = (*auladest).y;
 	}
@@ -148,6 +169,7 @@ void	set_goal()
 	goal.pose.position.x = coordx;
 	goal.pose.position.y = coordy;
 	pub_robot.publish(goal);
+	client_called = 0;
 	ros::spinOnce();
 }
 
@@ -198,8 +220,14 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 		{
 			res.serv_resp = 1;
 			get_infos(req.sender, req.receiver, req.aula);
+			cout << "[INFO] Richiesta di pick&delivery accettata" << endl;
+			cout << "sender: " << (*sender).hash << endl;
+			cout << "sender: " << req.receiver << endl;
+			cout << "sender: " << (*auladest).name << endl;
 			rob.status = 1;
+			cout << "[INFO] Settando un nuovo goal..." << endl;
 			set_goal();
+			cout << "[INFO] Nuovo goal settato" << endl;
 		}
 	}
 	return (true);
@@ -208,25 +236,21 @@ bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Resp
 void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 {
 	rob.distance = info->distance_to_global_goal;
-	cout << "[INFO] la distanza dal goal è: " << rob.distance << endl;
+	cout << "[INFO] La distanza dal goal è: " << rob.distance << endl;
 	if (rob.distance < 0.7)
 	{
 		if (rob.distance == rob.prevdist && rob.distance != 0)
 		{
 			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
-			if (rob.status == 2)
-				rob.status = 0;
-			else
-				rob.status++;
-			set_goal();
+			if (client_called == 0)
+			{
+				callClient();
+				cout << "[INFO] Settando un nuovo goal..." << endl;
+				set_goal();
+			}
 		}
 	}
 	rob.prevdist = info->distance_to_global_goal;
-}
-
-void	callback_Server(const pick_delivery::c_to_s& msg)
-{
-	return ;
 }
 
 int	main(int argc, char **argv)
@@ -238,8 +262,7 @@ int	main(int argc, char **argv)
 	servLog = node.advertiseService("/newclient", handle_client);
 	servSend = node.advertiseService("/invio", handle_invio);
 
-	pub_client = node.advertise<pick_delivery::s_to_c>("/s_to_c", 1000);
-	sub_client = node.subscribe("/c_to_s", 1000, callback_Server);
+	notifyClient = node.serviceClient<pick_delivery::notifica>("/notifica");
 
 	pub_robot = node.advertise<geometry_msgs::PoseStamped>("/move_base_simple/goal", 1000);
 	sub_robot = node.subscribe("/planner_status", 1000, check_robot);

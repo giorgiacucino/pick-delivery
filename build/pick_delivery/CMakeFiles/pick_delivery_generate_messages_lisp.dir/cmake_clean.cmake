@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/c_to_s.lisp"
   "/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/msg/s_to_c.lisp"
   "/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/invio.lisp"
+  "/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/notifica.lisp"
   "/home/me/lab/devel/.private/pick_delivery/share/common-lisp/ros/pick_delivery/srv/login.lisp"
 )
 

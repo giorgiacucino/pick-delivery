@@ -139,6 +139,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pick_delivery/srv" TYPE FILE FILES
     "/home/me/lab/src/pick_delivery/srv/login.srv"
     "/home/me/lab/src/pick_delivery/srv/invio.srv"
+    "/home/me/lab/src/pick_delivery/srv/notifica.srv"
     )
 endif()
 

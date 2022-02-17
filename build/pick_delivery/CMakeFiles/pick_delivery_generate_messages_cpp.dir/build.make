@@ -56,6 +56,7 @@ include CMakeFiles/pick_delivery_generate_messages_cpp.dir/progress.make
 CMakeFiles/pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/c_to_s.h
 CMakeFiles/pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/s_to_c.h
 CMakeFiles/pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invio.h
+CMakeFiles/pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h
 CMakeFiles/pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h
 
 
@@ -78,17 +79,25 @@ CMakeFiles/pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from pick_delivery/invio.srv"
 	cd /home/me/lab/src/pick_delivery && /home/me/lab/build/pick_delivery/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/me/lab/src/pick_delivery/srv/invio.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/include/pick_delivery -e /opt/ros/melodic/share/gencpp/cmake/..
 
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h: /home/me/lab/src/pick_delivery/srv/notifica.srv
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h: /opt/ros/melodic/share/gencpp/msg.h.template
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h: /opt/ros/melodic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from pick_delivery/notifica.srv"
+	cd /home/me/lab/src/pick_delivery && /home/me/lab/build/pick_delivery/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/me/lab/src/pick_delivery/srv/notifica.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/include/pick_delivery -e /opt/ros/melodic/share/gencpp/cmake/..
+
 /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
 /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h: /home/me/lab/src/pick_delivery/srv/login.srv
 /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h: /opt/ros/melodic/share/gencpp/msg.h.template
 /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h: /opt/ros/melodic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from pick_delivery/login.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from pick_delivery/login.srv"
 	cd /home/me/lab/src/pick_delivery && /home/me/lab/build/pick_delivery/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/me/lab/src/pick_delivery/srv/login.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/include/pick_delivery -e /opt/ros/melodic/share/gencpp/cmake/..
 
 pick_delivery_generate_messages_cpp: CMakeFiles/pick_delivery_generate_messages_cpp
 pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/c_to_s.h
 pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/s_to_c.h
 pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invio.h
+pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/notifica.h
 pick_delivery_generate_messages_cpp: /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/login.h
 pick_delivery_generate_messages_cpp: CMakeFiles/pick_delivery_generate_messages_cpp.dir/build.make
 

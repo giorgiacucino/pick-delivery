@@ -1,0 +1,1 @@
+/home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/notifica.js

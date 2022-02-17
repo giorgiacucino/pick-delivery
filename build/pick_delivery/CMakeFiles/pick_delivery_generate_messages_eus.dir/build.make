@@ -56,6 +56,7 @@ include CMakeFiles/pick_delivery_generate_messages_eus.dir/progress.make
 CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/msg/c_to_s.l
 CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/msg/s_to_c.l
 CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/invio.l
+CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/notifica.l
 CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l
 CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l
 
@@ -75,19 +76,25 @@ CMakeFiles/pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from pick_delivery/invio.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/me/lab/src/pick_delivery/srv/invio.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv
 
+/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/notifica.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/notifica.l: /home/me/lab/src/pick_delivery/srv/notifica.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from pick_delivery/notifica.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/me/lab/src/pick_delivery/srv/notifica.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv
+
 /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l: /opt/ros/melodic/lib/geneus/gen_eus.py
 /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l: /home/me/lab/src/pick_delivery/srv/login.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from pick_delivery/login.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from pick_delivery/login.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/me/lab/src/pick_delivery/srv/login.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv
 
 /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for pick_delivery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp manifest code for pick_delivery"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery pick_delivery std_msgs
 
 pick_delivery_generate_messages_eus: CMakeFiles/pick_delivery_generate_messages_eus
 pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/msg/c_to_s.l
 pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/msg/s_to_c.l
 pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/invio.l
+pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/notifica.l
 pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/srv/login.l
 pick_delivery_generate_messages_eus: /home/me/lab/devel/.private/pick_delivery/share/roseus/ros/pick_delivery/manifest.l
 pick_delivery_generate_messages_eus: CMakeFiles/pick_delivery_generate_messages_eus.dir/build.make

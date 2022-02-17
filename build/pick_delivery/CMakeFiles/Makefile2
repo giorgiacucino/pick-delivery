@@ -60,6 +60,43 @@ CMAKE_SOURCE_DIR = /home/me/lab/src/pick_delivery
 CMAKE_BINARY_DIR = /home/me/lab/build/pick_delivery
 
 #=============================================================================
+# Target rules for target CMakeFiles/server.dir
+
+# All Build rule for target.
+CMakeFiles/server.dir/all: CMakeFiles/pick_delivery_gencpp.dir/all
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=42,43 "Built target server"
+.PHONY : CMakeFiles/server.dir/all
+
+# Include target in all.
+all: CMakeFiles/server.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
+.PHONY : CMakeFiles/server.dir/rule
+
+# Convenience name for target.
+server: CMakeFiles/server.dir/rule
+
+.PHONY : server
+
+# clean rule for target.
+CMakeFiles/server.dir/clean:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
+.PHONY : CMakeFiles/server.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/server.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -227,15 +264,16 @@ CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all: CMakeFiles/_pick_deli
 CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_c_to_s.dir/all
 CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_s_to_c.dir/all
+CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
 CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_login.dir/all
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_nodejs.dir/build.make CMakeFiles/pick_delivery_generate_messages_nodejs.dir/depend
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_nodejs.dir/build.make CMakeFiles/pick_delivery_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=27,28,29,30 "Built target pick_delivery_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=30,31,32,33,34 "Built target pick_delivery_generate_messages_nodejs"
 .PHONY : CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_generate_messages_nodejs.dir/rule
@@ -295,15 +333,16 @@ CMakeFiles/pick_delivery_generate_messages_lisp.dir/all: CMakeFiles/_pick_delive
 CMakeFiles/pick_delivery_generate_messages_lisp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_c_to_s.dir/all
 CMakeFiles/pick_delivery_generate_messages_lisp.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 CMakeFiles/pick_delivery_generate_messages_lisp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_s_to_c.dir/all
+CMakeFiles/pick_delivery_generate_messages_lisp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
 CMakeFiles/pick_delivery_generate_messages_lisp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_login.dir/all
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_lisp.dir/build.make CMakeFiles/pick_delivery_generate_messages_lisp.dir/depend
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_lisp.dir/build.make CMakeFiles/pick_delivery_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=23,24,25,26 "Built target pick_delivery_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=25,26,27,28,29 "Built target pick_delivery_generate_messages_lisp"
 .PHONY : CMakeFiles/pick_delivery_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_generate_messages_lisp.dir/rule
@@ -596,7 +635,7 @@ all: CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/client.dir/rule
@@ -628,7 +667,7 @@ CMakeFiles/pick_delivery_genpy.dir/all: CMakeFiles/pick_delivery_generate_messag
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_genpy.dir/rule
@@ -645,38 +684,6 @@ CMakeFiles/pick_delivery_genpy.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/pick_delivery_genpy.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/download_extra_data.dir
-
-# All Build rule for target.
-CMakeFiles/download_extra_data.dir/all:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num= "Built target download_extra_data"
-.PHONY : CMakeFiles/download_extra_data.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
-.PHONY : CMakeFiles/download_extra_data.dir/rule
-
-# Convenience name for target.
-download_extra_data: CMakeFiles/download_extra_data.dir/rule
-
-.PHONY : download_extra_data
-
-# clean rule for target.
-CMakeFiles/download_extra_data.dir/clean:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/clean
-.PHONY : CMakeFiles/download_extra_data.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/download_extra_data.dir/clean
 
 .PHONY : clean
 
@@ -756,7 +763,7 @@ CMakeFiles/pick_delivery_gennodejs.dir/all: CMakeFiles/pick_delivery_generate_me
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_gennodejs.dir/rule
@@ -816,15 +823,16 @@ CMakeFiles/pick_delivery_generate_messages_eus.dir/all: CMakeFiles/std_msgs_gene
 CMakeFiles/pick_delivery_generate_messages_eus.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_invio.dir/all
 CMakeFiles/pick_delivery_generate_messages_eus.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_c_to_s.dir/all
 CMakeFiles/pick_delivery_generate_messages_eus.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_s_to_c.dir/all
+CMakeFiles/pick_delivery_generate_messages_eus.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
 CMakeFiles/pick_delivery_generate_messages_eus.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_login.dir/all
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_eus.dir/build.make CMakeFiles/pick_delivery_generate_messages_eus.dir/depend
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_eus.dir/build.make CMakeFiles/pick_delivery_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=18,19,20,21,22 "Built target pick_delivery_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=19,20,21,22,23,24 "Built target pick_delivery_generate_messages_eus"
 .PHONY : CMakeFiles/pick_delivery_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_generate_messages_eus.dir/rule
@@ -856,7 +864,7 @@ CMakeFiles/pick_delivery_geneus.dir/all: CMakeFiles/pick_delivery_generate_messa
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_geneus.dir/rule
@@ -920,7 +928,7 @@ CMakeFiles/pick_delivery_genlisp.dir/all: CMakeFiles/pick_delivery_generate_mess
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_genlisp.dir/rule
@@ -1025,7 +1033,7 @@ all: CMakeFiles/pick_delivery_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_generate_messages.dir/rule
@@ -1110,6 +1118,70 @@ clean: CMakeFiles/_pick_delivery_generate_messages_check_deps_s_to_c.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/download_extra_data.dir
+
+# All Build rule for target.
+CMakeFiles/download_extra_data.dir/all:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num= "Built target download_extra_data"
+.PHONY : CMakeFiles/download_extra_data.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
+.PHONY : CMakeFiles/download_extra_data.dir/rule
+
+# Convenience name for target.
+download_extra_data: CMakeFiles/download_extra_data.dir/rule
+
+.PHONY : download_extra_data
+
+# clean rule for target.
+CMakeFiles/download_extra_data.dir/clean:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/clean
+.PHONY : CMakeFiles/download_extra_data.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/download_extra_data.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir
+
+# All Build rule for target.
+CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all:
+	$(MAKE) -f CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/build.make CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/depend
+	$(MAKE) -f CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/build.make CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num= "Built target _pick_delivery_generate_messages_check_deps_notifica"
+.PHONY : CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
+.PHONY : CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/rule
+
+# Convenience name for target.
+_pick_delivery_generate_messages_check_deps_notifica: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/rule
+
+.PHONY : _pick_delivery_generate_messages_check_deps_notifica
+
+# clean rule for target.
+CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/clean:
+	$(MAKE) -f CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/build.make CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/clean
+.PHONY : CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/_pick_delivery_generate_messages_check_deps_login.dir
 
 # All Build rule for target.
@@ -1149,15 +1221,16 @@ CMakeFiles/pick_delivery_generate_messages_cpp.dir/all: CMakeFiles/_pick_deliver
 CMakeFiles/pick_delivery_generate_messages_cpp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_c_to_s.dir/all
 CMakeFiles/pick_delivery_generate_messages_cpp.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 CMakeFiles/pick_delivery_generate_messages_cpp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_s_to_c.dir/all
+CMakeFiles/pick_delivery_generate_messages_cpp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
 CMakeFiles/pick_delivery_generate_messages_cpp.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_login.dir/all
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_cpp.dir/build.make CMakeFiles/pick_delivery_generate_messages_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_cpp.dir/build.make CMakeFiles/pick_delivery_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=14,15,16,17 "Built target pick_delivery_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=14,15,16,17,18 "Built target pick_delivery_generate_messages_cpp"
 .PHONY : CMakeFiles/pick_delivery_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_generate_messages_cpp.dir/rule
@@ -1178,43 +1251,6 @@ clean: CMakeFiles/pick_delivery_generate_messages_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/server.dir
-
-# All Build rule for target.
-CMakeFiles/server.dir/all: CMakeFiles/pick_delivery_gencpp.dir/all
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=37,38 "Built target server"
-.PHONY : CMakeFiles/server.dir/all
-
-# Include target in all.
-all: CMakeFiles/server.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
-.PHONY : CMakeFiles/server.dir/rule
-
-# Convenience name for target.
-server: CMakeFiles/server.dir/rule
-
-.PHONY : server
-
-# clean rule for target.
-CMakeFiles/server.dir/clean:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
-.PHONY : CMakeFiles/server.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/server.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/pick_delivery_gencpp.dir
 
 # All Build rule for target.
@@ -1226,7 +1262,7 @@ CMakeFiles/pick_delivery_gencpp.dir/all: CMakeFiles/pick_delivery_generate_messa
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_gencpp.dir/rule
@@ -1254,15 +1290,16 @@ CMakeFiles/pick_delivery_generate_messages_py.dir/all: CMakeFiles/_pick_delivery
 CMakeFiles/pick_delivery_generate_messages_py.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
 CMakeFiles/pick_delivery_generate_messages_py.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_c_to_s.dir/all
 CMakeFiles/pick_delivery_generate_messages_py.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_s_to_c.dir/all
+CMakeFiles/pick_delivery_generate_messages_py.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/all
 CMakeFiles/pick_delivery_generate_messages_py.dir/all: CMakeFiles/_pick_delivery_generate_messages_check_deps_login.dir/all
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_py.dir/build.make CMakeFiles/pick_delivery_generate_messages_py.dir/depend
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_py.dir/build.make CMakeFiles/pick_delivery_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=31,32,33,34,35,36 "Built target pick_delivery_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=35,36,37,38,39,40,41 "Built target pick_delivery_generate_messages_py"
 .PHONY : CMakeFiles/pick_delivery_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pick_delivery_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/pick_delivery_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/me/lab/build/pick_delivery/CMakeFiles 0
 .PHONY : CMakeFiles/pick_delivery_generate_messages_py.dir/rule

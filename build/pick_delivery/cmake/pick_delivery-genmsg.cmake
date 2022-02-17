@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "pick_delivery: 2 messages, 2 services")
+message(STATUS "pick_delivery: 2 messages, 3 services")
 
 set(MSG_I_FLAGS "-Ipick_delivery:/home/me/lab/src/pick_delivery/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -30,6 +30,11 @@ add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
 add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" ""
+)
+
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/notifica.srv" NAME_WE)
+add_custom_target(_pick_delivery_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pick_delivery" "/home/me/lab/src/pick_delivery/srv/notifica.srv" ""
 )
 
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
@@ -64,6 +69,12 @@ _generate_srv_cpp(pick_delivery
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_cpp(pick_delivery
+  "/home/me/lab/src/pick_delivery/srv/notifica.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pick_delivery
+)
+_generate_srv_cpp(pick_delivery
   "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -87,6 +98,8 @@ add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_mes
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/notifica.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_cpp _pick_delivery_generate_messages_check_deps_${_filename})
@@ -121,6 +134,12 @@ _generate_srv_eus(pick_delivery
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_eus(pick_delivery
+  "/home/me/lab/src/pick_delivery/srv/notifica.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pick_delivery
+)
+_generate_srv_eus(pick_delivery
   "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -144,6 +163,8 @@ add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_mes
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/notifica.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_eus _pick_delivery_generate_messages_check_deps_${_filename})
@@ -178,6 +199,12 @@ _generate_srv_lisp(pick_delivery
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_lisp(pick_delivery
+  "/home/me/lab/src/pick_delivery/srv/notifica.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pick_delivery
+)
+_generate_srv_lisp(pick_delivery
   "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -201,6 +228,8 @@ add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_me
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/notifica.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_lisp _pick_delivery_generate_messages_check_deps_${_filename})
@@ -235,6 +264,12 @@ _generate_srv_nodejs(pick_delivery
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_nodejs(pick_delivery
+  "/home/me/lab/src/pick_delivery/srv/notifica.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pick_delivery
+)
+_generate_srv_nodejs(pick_delivery
   "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -258,6 +293,8 @@ add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/notifica.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_nodejs _pick_delivery_generate_messages_check_deps_${_filename})
@@ -292,6 +329,12 @@ _generate_srv_py(pick_delivery
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pick_delivery
 )
 _generate_srv_py(pick_delivery
+  "/home/me/lab/src/pick_delivery/srv/notifica.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pick_delivery
+)
+_generate_srv_py(pick_delivery
   "/home/me/lab/src/pick_delivery/srv/login.srv"
   "${MSG_I_FLAGS}"
   ""
@@ -315,6 +358,8 @@ add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_mess
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/c_to_s.msg" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/msg/s_to_c.msg" NAME_WE)
+add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/notifica.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/me/lab/src/pick_delivery/srv/login.srv" NAME_WE)
 add_dependencies(pick_delivery_generate_messages_py _pick_delivery_generate_messages_check_deps_${_filename})

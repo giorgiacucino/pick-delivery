@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named server
+
+# Build rule for target.
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+#=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -402,19 +415,6 @@ pick_delivery_genpy/fast:
 .PHONY : pick_delivery_genpy/fast
 
 #=============================================================================
-# Target rules for targets named download_extra_data
-
-# Build rule for target.
-download_extra_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
-.PHONY : download_extra_data
-
-# fast build rule for target.
-download_extra_data/fast:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-.PHONY : download_extra_data/fast
-
-#=============================================================================
 # Target rules for targets named run_tests
 
 # Build rule for target.
@@ -584,6 +584,32 @@ _pick_delivery_generate_messages_check_deps_s_to_c/fast:
 .PHONY : _pick_delivery_generate_messages_check_deps_s_to_c/fast
 
 #=============================================================================
+# Target rules for targets named download_extra_data
+
+# Build rule for target.
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
+
+# fast build rule for target.
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
+
+#=============================================================================
+# Target rules for targets named _pick_delivery_generate_messages_check_deps_notifica
+
+# Build rule for target.
+_pick_delivery_generate_messages_check_deps_notifica: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pick_delivery_generate_messages_check_deps_notifica
+.PHONY : _pick_delivery_generate_messages_check_deps_notifica
+
+# fast build rule for target.
+_pick_delivery_generate_messages_check_deps_notifica/fast:
+	$(MAKE) -f CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/build.make CMakeFiles/_pick_delivery_generate_messages_check_deps_notifica.dir/build
+.PHONY : _pick_delivery_generate_messages_check_deps_notifica/fast
+
+#=============================================================================
 # Target rules for targets named _pick_delivery_generate_messages_check_deps_login
 
 # Build rule for target.
@@ -608,19 +634,6 @@ pick_delivery_generate_messages_cpp: cmake_check_build_system
 pick_delivery_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/pick_delivery_generate_messages_cpp.dir/build.make CMakeFiles/pick_delivery_generate_messages_cpp.dir/build
 .PHONY : pick_delivery_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named server
-
-# Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 server
-.PHONY : server
-
-# fast build rule for target.
-server/fast:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
 
 #=============================================================================
 # Target rules for targets named pick_delivery_gencpp
@@ -765,6 +778,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... server"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... _pick_delivery_generate_messages_check_deps_invio"
@@ -784,7 +798,6 @@ help:
 	@echo "... _pick_delivery_generate_messages_check_deps_c_to_s"
 	@echo "... client"
 	@echo "... pick_delivery_genpy"
-	@echo "... download_extra_data"
 	@echo "... run_tests"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... pick_delivery_gennodejs"
@@ -799,9 +812,10 @@ help:
 	@echo "... pick_delivery_generate_messages"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... _pick_delivery_generate_messages_check_deps_s_to_c"
+	@echo "... download_extra_data"
+	@echo "... _pick_delivery_generate_messages_check_deps_notifica"
 	@echo "... _pick_delivery_generate_messages_check_deps_login"
 	@echo "... pick_delivery_generate_messages_cpp"
-	@echo "... server"
 	@echo "... pick_delivery_gencpp"
 	@echo "... pick_delivery_generate_messages_py"
 	@echo "... gmock_main"

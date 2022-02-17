@@ -56,6 +56,7 @@ include CMakeFiles/pick_delivery_generate_messages_nodejs.dir/progress.make
 CMakeFiles/pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/msg/c_to_s.js
 CMakeFiles/pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/msg/s_to_c.js
 CMakeFiles/pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/invio.js
+CMakeFiles/pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/notifica.js
 CMakeFiles/pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/login.js
 
 
@@ -74,15 +75,21 @@ CMakeFiles/pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/p
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from pick_delivery/invio.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/me/lab/src/pick_delivery/srv/invio.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv
 
+/home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/notifica.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/notifica.js: /home/me/lab/src/pick_delivery/srv/notifica.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from pick_delivery/notifica.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/me/lab/src/pick_delivery/srv/notifica.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv
+
 /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/login.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/login.js: /home/me/lab/src/pick_delivery/srv/login.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from pick_delivery/login.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/me/lab/build/pick_delivery/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from pick_delivery/login.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/me/lab/src/pick_delivery/srv/login.srv -Ipick_delivery:/home/me/lab/src/pick_delivery/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p pick_delivery -o /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv
 
 pick_delivery_generate_messages_nodejs: CMakeFiles/pick_delivery_generate_messages_nodejs
 pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/msg/c_to_s.js
 pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/msg/s_to_c.js
 pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/invio.js
+pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/notifica.js
 pick_delivery_generate_messages_nodejs: /home/me/lab/devel/.private/pick_delivery/share/gennodejs/ros/pick_delivery/srv/login.js
 pick_delivery_generate_messages_nodejs: CMakeFiles/pick_delivery_generate_messages_nodejs.dir/build.make
 

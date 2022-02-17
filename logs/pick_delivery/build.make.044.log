@@ -1,0 +1,79 @@
+[  0%] Built target _pick_delivery_generate_messages_check_deps_invio
+[  0%] Built target _pick_delivery_generate_messages_check_deps_login
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _pick_delivery_generate_messages_check_deps_s_to_c
+[  0%] Built target _pick_delivery_generate_messages_check_deps_c_to_s
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _pick_delivery_generate_messages_check_deps_notifica
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[ 15%] Built target pick_delivery_generate_messages_cpp
+[ 37%] Built target pick_delivery_generate_messages_py
+[ 53%] Built target pick_delivery_generate_messages_nodejs
+[ 68%] Built target pick_delivery_generate_messages_lisp
+[ 87%] Built target pick_delivery_generate_messages_eus
+[ 87%] Built target pick_delivery_gencpp
+[ 87%] Built target pick_delivery_generate_messages
+[35m[1mScanning dependencies of target client[0m
+[ 93%] Built target server
+[ 96%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:[m[K In function ‘[01m[Kvoid scegli()[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:54:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kmostra_aule[m[K’ was not declared in this scope
+   [01;31m[Kmostra_aule[m[K(aulelist);
+   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:54:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kget_aule[m[K’
+   [01;36m[Kmostra_aule[m[K(aulelist);
+   [01;36m[K^~~~~~~~~~~[m[K
+   [32m[Kget_aule[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:68:8:[m[K [01;31m[Kerror: [m[K‘[01m[KSCsend[m[K’ was not declared in this scope
+    if ([01;31m[KSCsend[m[K.call(msg2send))
+        [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:68:8:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kva_end[m[K’
+    if ([01;36m[KSCsend[m[K.call(msg2send))
+        [01;36m[K^~~~~~[m[K
+        [32m[Kva_end[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:108:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmostra_aule[m[K’ was not declared in this scope
+     [01;31m[Kmostra_aule[m[K(aulelist);
+     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:108:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kget_aule[m[K’
+     [01;36m[Kmostra_aule[m[K(aulelist);
+     [01;36m[K^~~~~~~~~~~[m[K
+     [32m[Kget_aule[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:114:9:[m[K [01;31m[Kerror: [m[K‘[01m[KSClog[m[K’ was not declared in this scope
+     if ([01;31m[KSClog[m[K.call(msglog))
+         [01;31m[K^~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:114:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K__log[m[K’
+     if ([01;36m[KSClog[m[K.call(msglog))
+         [01;36m[K^~~~~[m[K
+         [32m[K__log[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:126:4:[m[K [01;31m[Kerror: [m[Kcontinue statement not within a loop
+    [01;31m[Kcontinue[m[K ;
+    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:132:8:[m[K [01;31m[Kerror: [m[K‘[01m[KSClog[m[K’ was not declared in this scope
+    if ([01;31m[KSClog[m[K.call(msglog))
+        [01;31m[K^~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:132:8:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K__log[m[K’
+    if ([01;36m[KSClog[m[K.call(msglog))
+        [01;36m[K^~~~~[m[K
+        [32m[K__log[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:136:5:[m[K [01;31m[Kerror: [m[Kbreak statement not within loop or switch
+     [01;31m[Kbreak[m[K ;
+     [01;31m[K^~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:209:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::Duration::sleep(int)[m[K’
+   ros::Duration::sleep(10[01;31m[K)[m[K;
+                          [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/time.h:57:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/duration.h:125:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::Duration::sleep() const
+   bool [01;36m[Ksleep[m[K() const;
+        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/duration.h:125:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+CMakeFiles/client.dir/build.make:62: recipe for target 'CMakeFiles/client.dir/src/client.cpp.o' failed
+CMakeFiles/Makefile2:626: recipe for target 'CMakeFiles/client.dir/all' failed
+Makefile:140: recipe for target 'all' failed
+make[2]: *** [CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/client.dir/all] Error 2
+make: *** [all] Error 2

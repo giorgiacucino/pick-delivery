@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/me/lab/src/pick_delivery/msg/c_to_s.msg;/home/me/lab/src/pick_delivery/msg/s_to_c.msg"
-services_str = "/home/me/lab/src/pick_delivery/srv/login.srv;/home/me/lab/src/pick_delivery/srv/invio.srv"
+services_str = "/home/me/lab/src/pick_delivery/srv/login.srv;/home/me/lab/src/pick_delivery/srv/invio.srv;/home/me/lab/src/pick_delivery/srv/notifica.srv"
 pkg_name = "pick_delivery"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
