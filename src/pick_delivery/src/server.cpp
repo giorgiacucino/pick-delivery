@@ -8,6 +8,8 @@
 #include "/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/devel/include/srrg2_core_ros/PlannerStatusMessage.h"
 #include "pick_delivery/invio.h"
 #include "pick_delivery/notifica.h"
+#include "pick_delivery/s_to_c.h"
+#include "pick_delivery/c_to_s.h"
 #include <fstream>
 #include <geometry_msgs/PoseStamped.h>
 
@@ -17,13 +19,13 @@ user*						sender;
 user*						receiver;
 aula*						auladest;
 int							broadcast;
-int							client_called = 0;
-pick_delivery::notifica		n;
+pick_delivery::s_to_c		n;
 geometry_msgs::PoseStamped	goal;
 robot						rob = robot(0, 1);
 ros::ServiceServer			servLog;
 ros::ServiceServer			servSend;
-ros::ServiceClient			notifyClient;
+ros::Publisher				pub_client;
+ros::Subscriber				sub_client;
 ros::Publisher				pub_robot;
 ros::Subscriber				sub_robot;
 
@@ -127,39 +129,12 @@ void	get_infos(string sen, string recv, string auladst)
 		log_all_users(*auladest, 0);
 }
 
-void callClient()
-{
-	client_called = 1;
-	cout << "stato attuale del robot: " << rob.status << endl;
-	if (rob.status == 0)
-		return ;
-	else if (rob.status == 1)
-	{
-		n.request.user = (*sender).hash;
-		n.request.auladest = "";
-		n.request.msg = "E' arrivato il robot e ha preso in consegna il pacco";
-	}
-	else if (rob.status == 2)
-	{
-		if (broadcast == 1)
-			n.request.user = "";
-		else
-			n.request.user = (*receiver).hash;
-		n.request.auladest = (*auladest).name;
-		n.request.msg = "C'è un pacco per te, ritiralo";
-	}
-	cout << "[INFO] Aspetto risposta dal client..." << endl;
-	while (notifyClient.call(n) == 0);
-	rob.status = n.response.picked;
-}
-
 void	set_goal()
 {
 	int	coordx;
 	int coordy;
 	cout << "rob.status " << rob.status << endl;
 	if (rob.status == 0)
-		//log_all_users(*auladest, 1);
 		return ;
 	if (rob.status == 1)
 	{
@@ -168,7 +143,6 @@ void	set_goal()
 	}
 	if (rob.status == 2)
 	{
-		//(*sender).can_logout = 1;
 		coordx = (*auladest).x;
 		coordy = (*auladest).y;
 	}
@@ -179,7 +153,45 @@ void	set_goal()
 	goal.pose.position.y = coordy;
 	cout << "[INFO] Goal settato a " << coordx << " " << coordy << endl;
 	pub_robot.publish(goal);
-	client_called = 0;
+	ros::spinOnce();
+}
+
+void	callback_Server(const pick_delivery::c_to_s::ConstPtr& msg)
+{
+	rob.status = msg->resp;
+	if (rob.status == 2)
+	{
+		(*sender).can_logout = 1;
+		set_goal();
+	}
+	else if (rob.status == 0)
+		log_all_users(*auladest, 1);
+}
+
+void 	callClient()
+{
+	cout << "stato attuale del robot: " << rob.status << endl;
+	if (rob.status == 0)
+		return ;
+	else if (rob.status == 1)
+	{
+		n.user = (*sender).hash;
+		n.auladest = "";
+		n.msg = "E' arrivato il robot e ha preso in consegna il pacco";
+		n.pd = 1;
+	}
+	else if (rob.status == 2)
+	{
+		if (broadcast == 1)
+			n.user = "0";
+		else
+			n.user = (*receiver).hash;
+		n.auladest = (*auladest).name;
+		n.msg = "C'è un pacco per te, ritiralo";
+		n.pd = 2;
+	}
+	cout << "[INFO] Aspetto risposta dal client..." << endl;
+	pub_client.publish(n);
 	ros::spinOnce();
 }
 
@@ -249,13 +261,12 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 	cout << "[INFO] La distanza dal goal è: " << rob.distance << endl;
 	if (rob.distance < 0.7)
 	{
-		if (rob.prevdist >= 0.7)
+		if (rob.prevdist >= 0.7 && rob.distance != rob.prevdist && rob.distance != 0)
 		{
 			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
 			cout << "[INFO] Sto chiamando il client..." << endl;
 			callClient();
 			cout << "[INFO] Settando un nuovo goal..." << endl;
-			set_goal();
 		}
 	}
 	rob.prevdist = info->distance_to_global_goal;
@@ -270,7 +281,8 @@ int	main(int argc, char **argv)
 	servLog = node.advertiseService("/newclient", handle_client);
 	servSend = node.advertiseService("/invio", handle_invio);
 
-	notifyClient = node.serviceClient<pick_delivery::notifica>("/notifica");
+	pub_client = node.advertise<pick_delivery::s_to_c>("/stoc", 1000);
+	sub_client = node.subscribe("/ctos", 1000, callback_Server);
 
 	pub_robot = node.advertise<geometry_msgs::PoseStamped>("/move_base_simple/goal", 1000);
 	sub_robot = node.subscribe("/planner_status", 1000, check_robot);

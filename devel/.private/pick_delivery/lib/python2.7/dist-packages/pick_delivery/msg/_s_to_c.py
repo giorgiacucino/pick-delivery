@@ -8,16 +8,15 @@ import struct
 
 
 class s_to_c(genpy.Message):
-  _md5sum = "0b8b43e320b3eab867baa8730a8cbde6"
+  _md5sum = "4026358b2d8ac7d89ae115170c802353"
   _type = "pick_delivery/s_to_c"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """string sender
-string receiver
+  _full_text = """string user
 string auladest
-string msgs
-string msgr"""
-  __slots__ = ['sender','receiver','auladest','msgs','msgr']
-  _slot_types = ['string','string','string','string','string']
+string msg
+int64 pd"""
+  __slots__ = ['user','auladest','msg','pd']
+  _slot_types = ['string','string','string','int64']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +26,7 @@ string msgr"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       sender,receiver,auladest,msgs,msgr
+       user,auladest,msg,pd
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,22 +35,19 @@ string msgr"""
     if args or kwds:
       super(s_to_c, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.sender is None:
-        self.sender = ''
-      if self.receiver is None:
-        self.receiver = ''
+      if self.user is None:
+        self.user = ''
       if self.auladest is None:
         self.auladest = ''
-      if self.msgs is None:
-        self.msgs = ''
-      if self.msgr is None:
-        self.msgr = ''
+      if self.msg is None:
+        self.msg = ''
+      if self.pd is None:
+        self.pd = 0
     else:
-      self.sender = ''
-      self.receiver = ''
+      self.user = ''
       self.auladest = ''
-      self.msgs = ''
-      self.msgr = ''
+      self.msg = ''
+      self.pd = 0
 
   def _get_types(self):
     """
@@ -65,13 +61,7 @@ string msgr"""
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.sender
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
-      _x = self.receiver
+      _x = self.user
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -83,18 +73,14 @@ string msgr"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
-      _x = self.msgs
+      _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
-      _x = self.msgr
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.pd
+      buff.write(_get_struct_q().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -112,18 +98,9 @@ string msgr"""
       start = end
       end += length
       if python3:
-        self.sender = str[start:end].decode('utf-8', 'rosmsg')
+        self.user = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.sender = str[start:end]
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.receiver = str[start:end].decode('utf-8', 'rosmsg')
-      else:
-        self.receiver = str[start:end]
+        self.user = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -139,18 +116,12 @@ string msgr"""
       start = end
       end += length
       if python3:
-        self.msgs = str[start:end].decode('utf-8', 'rosmsg')
+        self.msg = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.msgs = str[start:end]
+        self.msg = str[start:end]
       start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.msgr = str[start:end].decode('utf-8', 'rosmsg')
-      else:
-        self.msgr = str[start:end]
+      end += 8
+      (self.pd,) = _get_struct_q().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -163,13 +134,7 @@ string msgr"""
     :param numpy: numpy python module
     """
     try:
-      _x = self.sender
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
-      _x = self.receiver
+      _x = self.user
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -181,18 +146,14 @@ string msgr"""
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
-      _x = self.msgs
+      _x = self.msg
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
-      _x = self.msgr
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      _x = self.pd
+      buff.write(_get_struct_q().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -211,18 +172,9 @@ string msgr"""
       start = end
       end += length
       if python3:
-        self.sender = str[start:end].decode('utf-8', 'rosmsg')
+        self.user = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.sender = str[start:end]
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.receiver = str[start:end].decode('utf-8', 'rosmsg')
-      else:
-        self.receiver = str[start:end]
+        self.user = str[start:end]
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -238,18 +190,12 @@ string msgr"""
       start = end
       end += length
       if python3:
-        self.msgs = str[start:end].decode('utf-8', 'rosmsg')
+        self.msg = str[start:end].decode('utf-8', 'rosmsg')
       else:
-        self.msgs = str[start:end]
+        self.msg = str[start:end]
       start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      start = end
-      end += length
-      if python3:
-        self.msgr = str[start:end].decode('utf-8', 'rosmsg')
-      else:
-        self.msgr = str[start:end]
+      end += 8
+      (self.pd,) = _get_struct_q().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -258,3 +204,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_q = None
+def _get_struct_q():
+    global _struct_q
+    if _struct_q is None:
+        _struct_q = struct.Struct("<q")
+    return _struct_q

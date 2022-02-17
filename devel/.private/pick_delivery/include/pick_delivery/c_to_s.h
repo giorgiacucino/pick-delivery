@@ -24,27 +24,17 @@ struct c_to_s_
   typedef c_to_s_<ContainerAllocator> Type;
 
   c_to_s_()
-    : sender()
-    , receiver()
-    , auladest()  {
+    : resp(0)  {
     }
   c_to_s_(const ContainerAllocator& _alloc)
-    : sender(_alloc)
-    , receiver(_alloc)
-    , auladest(_alloc)  {
+    : resp(0)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _sender_type;
-  _sender_type sender;
-
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _receiver_type;
-  _receiver_type receiver;
-
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _auladest_type;
-  _auladest_type auladest;
+   typedef int64_t _resp_type;
+  _resp_type resp;
 
 
 
@@ -75,9 +65,7 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::pick_delivery::c_to_s_<ContainerAllocator1> & lhs, const ::pick_delivery::c_to_s_<ContainerAllocator2> & rhs)
 {
-  return lhs.sender == rhs.sender &&
-    lhs.receiver == rhs.receiver &&
-    lhs.auladest == rhs.auladest;
+  return lhs.resp == rhs.resp;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -100,12 +88,12 @@ namespace message_traits
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::pick_delivery::c_to_s_<ContainerAllocator> >
-  : FalseType
+  : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::pick_delivery::c_to_s_<ContainerAllocator> const>
-  : FalseType
+  : TrueType
   { };
 
 template <class ContainerAllocator>
@@ -134,12 +122,12 @@ struct MD5Sum< ::pick_delivery::c_to_s_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "1edfb1960ffea85e363609983abdaaf3";
+    return "15982c3a12e735514ac7ff5c21fc3ece";
   }
 
   static const char* value(const ::pick_delivery::c_to_s_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1edfb1960ffea85eULL;
-  static const uint64_t static_value2 = 0x363609983abdaaf3ULL;
+  static const uint64_t static_value1 = 0x15982c3a12e73551ULL;
+  static const uint64_t static_value2 = 0x4ac7ff5c21fc3eceULL;
 };
 
 template<class ContainerAllocator>
@@ -158,9 +146,7 @@ struct Definition< ::pick_delivery::c_to_s_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string sender\n"
-"string receiver\n"
-"string auladest\n"
+    return "int64 resp\n"
 ;
   }
 
@@ -179,9 +165,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.sender);
-      stream.next(m.receiver);
-      stream.next(m.auladest);
+      stream.next(m.resp);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -200,12 +184,8 @@ struct Printer< ::pick_delivery::c_to_s_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::pick_delivery::c_to_s_<ContainerAllocator>& v)
   {
-    s << indent << "sender: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.sender);
-    s << indent << "receiver: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.receiver);
-    s << indent << "auladest: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.auladest);
+    s << indent << "resp: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.resp);
   }
 };
 

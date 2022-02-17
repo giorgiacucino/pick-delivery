@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/c_to_s.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/me/lab/devel/.private/pick_delivery/include/pick_delivery/invio.h
 ros/service_traits.h
 -
@@ -126,6 +142,22 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/me/lab/devel/.private/pick_delivery/include/pick_delivery/s_to_c.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/me/lab/src/pick_delivery/src/aula.h
 stdlib.h
 -
@@ -169,6 +201,10 @@ pick_delivery/invio.h
 /home/me/lab/src/pick_delivery/src/pick_delivery/invio.h
 pick_delivery/notifica.h
 /home/me/lab/src/pick_delivery/src/pick_delivery/notifica.h
+pick_delivery/s_to_c.h
+/home/me/lab/src/pick_delivery/src/pick_delivery/s_to_c.h
+pick_delivery/c_to_s.h
+/home/me/lab/src/pick_delivery/src/pick_delivery/c_to_s.h
 fstream
 -
 geometry_msgs/PoseStamped.h

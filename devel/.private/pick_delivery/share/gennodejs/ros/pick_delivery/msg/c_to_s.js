@@ -18,40 +18,22 @@ class c_to_s {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.sender = null;
-      this.receiver = null;
-      this.auladest = null;
+      this.resp = null;
     }
     else {
-      if (initObj.hasOwnProperty('sender')) {
-        this.sender = initObj.sender
+      if (initObj.hasOwnProperty('resp')) {
+        this.resp = initObj.resp
       }
       else {
-        this.sender = '';
-      }
-      if (initObj.hasOwnProperty('receiver')) {
-        this.receiver = initObj.receiver
-      }
-      else {
-        this.receiver = '';
-      }
-      if (initObj.hasOwnProperty('auladest')) {
-        this.auladest = initObj.auladest
-      }
-      else {
-        this.auladest = '';
+        this.resp = 0;
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type c_to_s
-    // Serialize message field [sender]
-    bufferOffset = _serializer.string(obj.sender, buffer, bufferOffset);
-    // Serialize message field [receiver]
-    bufferOffset = _serializer.string(obj.receiver, buffer, bufferOffset);
-    // Serialize message field [auladest]
-    bufferOffset = _serializer.string(obj.auladest, buffer, bufferOffset);
+    // Serialize message field [resp]
+    bufferOffset = _serializer.int64(obj.resp, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -59,21 +41,13 @@ class c_to_s {
     //deserializes a message object of type c_to_s
     let len;
     let data = new c_to_s(null);
-    // Deserialize message field [sender]
-    data.sender = _deserializer.string(buffer, bufferOffset);
-    // Deserialize message field [receiver]
-    data.receiver = _deserializer.string(buffer, bufferOffset);
-    // Deserialize message field [auladest]
-    data.auladest = _deserializer.string(buffer, bufferOffset);
+    // Deserialize message field [resp]
+    data.resp = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    let length = 0;
-    length += object.sender.length;
-    length += object.receiver.length;
-    length += object.auladest.length;
-    return length + 12;
+    return 8;
   }
 
   static datatype() {
@@ -83,15 +57,13 @@ class c_to_s {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '1edfb1960ffea85e363609983abdaaf3';
+    return '15982c3a12e735514ac7ff5c21fc3ece';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string sender
-    string receiver
-    string auladest
+    int64 resp
     `;
   }
 
@@ -101,25 +73,11 @@ class c_to_s {
       msg = {};
     }
     const resolved = new c_to_s(null);
-    if (msg.sender !== undefined) {
-      resolved.sender = msg.sender;
+    if (msg.resp !== undefined) {
+      resolved.resp = msg.resp;
     }
     else {
-      resolved.sender = ''
-    }
-
-    if (msg.receiver !== undefined) {
-      resolved.receiver = msg.receiver;
-    }
-    else {
-      resolved.receiver = ''
-    }
-
-    if (msg.auladest !== undefined) {
-      resolved.auladest = msg.auladest;
-    }
-    else {
-      resolved.auladest = ''
+      resolved.resp = 0
     }
 
     return resolved;

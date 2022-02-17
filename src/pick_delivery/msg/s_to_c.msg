@@ -1,5 +1,4 @@
-string sender
-string receiver
+string user
 string auladest
-string msgs
-string msgr
+string msg
+int64 pd

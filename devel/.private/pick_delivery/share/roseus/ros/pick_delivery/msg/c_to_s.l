@@ -14,73 +14,69 @@
 
 (defclass pick_delivery::c_to_s
   :super ros::object
-  :slots (_sender _receiver _auladest ))
+  :slots (_resp ))
 
 (defmethod pick_delivery::c_to_s
   (:init
    (&key
-    ((:sender __sender) "")
-    ((:receiver __receiver) "")
-    ((:auladest __auladest) "")
+    ((:resp __resp) 0)
     )
    (send-super :init)
-   (setq _sender (string __sender))
-   (setq _receiver (string __receiver))
-   (setq _auladest (string __auladest))
+   (setq _resp (round __resp))
    self)
-  (:sender
-   (&optional __sender)
-   (if __sender (setq _sender __sender)) _sender)
-  (:receiver
-   (&optional __receiver)
-   (if __receiver (setq _receiver __receiver)) _receiver)
-  (:auladest
-   (&optional __auladest)
-   (if __auladest (setq _auladest __auladest)) _auladest)
+  (:resp
+   (&optional __resp)
+   (if __resp (setq _resp __resp)) _resp)
   (:serialization-length
    ()
    (+
-    ;; string _sender
-    4 (length _sender)
-    ;; string _receiver
-    4 (length _receiver)
-    ;; string _auladest
-    4 (length _auladest)
+    ;; int64 _resp
+    8
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; string _sender
-       (write-long (length _sender) s) (princ _sender s)
-     ;; string _receiver
-       (write-long (length _receiver) s) (princ _receiver s)
-     ;; string _auladest
-       (write-long (length _auladest) s) (princ _auladest s)
+     ;; int64 _resp
+#+(or :alpha :irix6 :x86_64)
+       (progn (sys::poke _resp (send s :buffer) (send s :count) :long) (incf (stream-count s) 8))
+#-(or :alpha :irix6 :x86_64)
+       (cond ((and (class _resp) (= (length (_resp . bv)) 2)) ;; bignum
+              (write-long (ash (elt (_resp . bv) 0) 0) s)
+              (write-long (ash (elt (_resp . bv) 1) -1) s))
+             ((and (class _resp) (= (length (_resp . bv)) 1)) ;; big1
+              (write-long (elt (_resp . bv) 0) s)
+              (write-long (if (>= _resp 0) 0 #xffffffff) s))
+             (t                                         ;; integer
+              (write-long _resp s)(write-long (if (>= _resp 0) 0 #xffffffff) s)))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; string _sender
-     (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _sender (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
-   ;; string _receiver
-     (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _receiver (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
-   ;; string _auladest
-     (let (n) (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4) (setq _auladest (subseq buf ptr- (+ ptr- n))) (incf ptr- n))
+   ;; int64 _resp
+#+(or :alpha :irix6 :x86_64)
+      (setf _resp (prog1 (sys::peek buf ptr- :long) (incf ptr- 8)))
+#-(or :alpha :irix6 :x86_64)
+      (setf _resp (let ((b0 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4)))
+                  (b1 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4))))
+              (cond ((= b1 -1) b0)
+                     ((and (= b1  0)
+                           (<= lisp::most-negative-fixnum b0 lisp::most-positive-fixnum))
+                      b0)
+                    ((= b1  0) (make-instance bignum :size 1 :bv (integer-vector b0)))
+                    (t (make-instance bignum :size 2 :bv (integer-vector b0 (ash b1 1)))))))
    ;;
    self)
   )
 
-(setf (get pick_delivery::c_to_s :md5sum-) "1edfb1960ffea85e363609983abdaaf3")
+(setf (get pick_delivery::c_to_s :md5sum-) "15982c3a12e735514ac7ff5c21fc3ece")
 (setf (get pick_delivery::c_to_s :datatype-) "pick_delivery/c_to_s")
 (setf (get pick_delivery::c_to_s :definition-)
-      "string sender
-string receiver
-string auladest
+      "int64 resp
 ")
 
 
 
-(provide :pick_delivery/c_to_s "1edfb1960ffea85e363609983abdaaf3")
+(provide :pick_delivery/c_to_s "15982c3a12e735514ac7ff5c21fc3ece")
 
 

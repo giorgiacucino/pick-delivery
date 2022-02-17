@@ -1,3 +1,1 @@
-string sender
-string receiver
-string auladest
+int64 resp

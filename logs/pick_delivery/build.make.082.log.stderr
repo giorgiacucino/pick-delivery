@@ -1,0 +1,123 @@
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:25:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kc_to_s[m[K’ in namespace ‘[01m[Kpick_delivery[m[K’ does not name a type
+ pick_delivery::[01;31m[Kc_to_s[m[K res;
+                [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:49:37:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Khandle_notifica[m[K’ declared void
+ void handle_notifica(pick_delivery::[01;31m[Ks_to_c[m[K::ConstPtr &msg)
+                                     [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:49:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kpick_delivery::s_to_c[m[K’ has not been declared
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:49:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+ void handle_notifica(pick_delivery::s_to_c::ConstPtr &[01;31m[Kmsg[m[K)
+                                                       [01;31m[K^~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:89:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kc_to_s[m[K’ is not a member of ‘[01m[Kpick_delivery[m[K’
+  pub_server = node.advertise<pick_delivery::[01;31m[Kc_to_s[m[K>("/ctos", 1000);
+                                             [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:89:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kc_to_s[m[K’ is not a member of ‘[01m[Kpick_delivery[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:89:66:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<<expression error> >(const char [6], int)[m[K’
+  pub_server = node.advertise<pick_delivery::c_to_s>("/ctos", 1000[01;31m[K)[m[K;
+                                                                  [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:89:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  pub_server = node.advertise<pick_delivery::c_to_s>("/ctos", 1000[01;31m[K)[m[K;
+                                                                  [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/client.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+             [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:89:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  pub_server = node.advertise<pick_delivery::c_to_s>("/ctos", 1000[01;31m[K)[m[K;
+                                                                  [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/client.cpp:90:45:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_notifica[m[K’ was not declared in this scope
+  sub_server = node.subscribe("/stoc", 1000, [01;31m[Khandle_notifica[m[K);
+                                             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:20:16:[m[K [01;31m[Kerror: [m[K‘[01m[Ks_to_c[m[K’ in namespace ‘[01m[Kpick_delivery[m[K’ does not name a type
+ pick_delivery::[01;31m[Ks_to_c[m[K  n;
+                [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:131:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kc_to_s[m[K’ in namespace ‘[01m[Kpick_delivery[m[K’ does not name a type
+ void callback_Server(const pick_delivery::[01;31m[Kc_to_s[m[K::ConstPtr& msg)
+                                           [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:131:59:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+ void callback_Server(const pick_delivery::c_to_s::ConstPtr[01;31m[K&[m[K msg)
+                                                           [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:131:59:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:131:61:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+ void callback_Server(const pick_delivery::c_to_s::ConstPtr& [01;31m[Kmsg[m[K)
+                                                             [01;31m[K^~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kvoid callClient()[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:143:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+   [01;31m[Kn[m[K.user = (*sender).hash;
+   [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:143:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+   [01;36m[Kn[m[K.user = (*sender).hash;
+   [01;36m[K^[m[K
+   [32m[Kyn[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:150:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+    [01;31m[Kn[m[K.user = "0";
+    [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:150:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+    [01;36m[Kn[m[K.user = "0";
+    [01;36m[K^[m[K
+    [32m[Kyn[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:152:4:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+    [01;31m[Kn[m[K.user = (*receiver).hash;
+    [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:152:4:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+    [01;36m[Kn[m[K.user = (*receiver).hash;
+    [01;36m[K^[m[K
+    [32m[Kyn[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:153:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+   [01;31m[Kn[m[K.auladest = (*auladest).name;
+   [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:153:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+   [01;36m[Kn[m[K.auladest = (*auladest).name;
+   [01;36m[K^[m[K
+   [32m[Kyn[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:157:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+  pub_client.publish([01;31m[Kn[m[K);
+                     [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:157:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kyn[m[K’
+  pub_client.publish([01;36m[Kn[m[K);
+                     [01;36m[K^[m[K
+                     [32m[Kyn[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:279:45:[m[K [01;31m[Kerror: [m[K‘[01m[Ks_to_c[m[K’ is not a member of ‘[01m[Kpick_delivery[m[K’
+  pub_client = node.advertise<pick_delivery::[01;31m[Ks_to_c[m[K>("/stoc", 1000);
+                                             [01;31m[K^~~~~~[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:279:45:[m[K [01;31m[Kerror: [m[K‘[01m[Ks_to_c[m[K’ is not a member of ‘[01m[Kpick_delivery[m[K’
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:279:66:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<<expression error> >(const char [6], int)[m[K’
+  pub_client = node.advertise<pick_delivery::s_to_c>("/stoc", 1000[01;31m[K)[m[K;
+                                                                  [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:279:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  pub_client = node.advertise<pick_delivery::s_to_c>("/stoc", 1000[01;31m[K)[m[K;
+                                                                  [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/me/lab/src/pick_delivery/src/server.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+             [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:279:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  pub_client = node.advertise<pick_delivery::s_to_c>("/stoc", 1000[01;31m[K)[m[K;
+                                                                  [01;31m[K^[m[K
+[01m[K/home/me/lab/src/pick_delivery/src/server.cpp:280:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kcallback_Server[m[K’ was not declared in this scope
+  sub_client = node.subscribe("/ctos", 1000, [01;31m[Kcallback_Server[m[K);
+                                             [01;31m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/client.dir/src/client.cpp.o] Error 1
+make[1]: *** [CMakeFiles/client.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/server.dir/src/server.cpp.o] Error 1
+make[1]: *** [CMakeFiles/server.dir/all] Error 2
+make: *** [all] Error 2
