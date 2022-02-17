@@ -36,7 +36,12 @@ bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Res
 			if (u.hash == req.name && u.can_logout == 1)
 			{
 				userlist.remove(u);
-				res.serv_resp = "bye bye!";
+				res.serv_resp = "Bye bye!";
+			}
+			else if (u.hash == req.name)
+			{
+				res.serv_resp = "Il robot sta venendo da te, aspettalo";
+				return (0);
 			}
 		}
 	}
@@ -152,6 +157,7 @@ void	set_goal()
 {
 	int	coordx;
 	int coordy;
+	cout << "rob.status " << rob.status << endl;
 	if (rob.status == 0)
 		//log_all_users(*auladest, 1);
 		return ;
@@ -166,14 +172,15 @@ void	set_goal()
 		coordx = (*auladest).x;
 		coordy = (*auladest).y;
 	}
+	cout << "[INFO] Il robot deve andare alla coordinata " << coordx << " " << coordy << endl;
 	goal.header.stamp = ros::Time::now();
 	goal.header.frame_id = "map";
 	goal.pose.position.x = coordx;
 	goal.pose.position.y = coordy;
+	cout << "[INFO] Goal settato a " << coordx << " " << coordy << endl;
 	pub_robot.publish(goal);
 	client_called = 0;
 	ros::spinOnce();
-	cout << "Il goal è stato settato a: " << coordx << " " << coordy << endl;
 }
 
 bool	handle_invio(pick_delivery::invio::Request &req, pick_delivery::invio::Response &res)
@@ -242,7 +249,7 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 	cout << "[INFO] La distanza dal goal è: " << rob.distance << endl;
 	if (rob.distance < 0.7)
 	{
-		if (rob.distance == rob.prevdist && rob.distance != 0 && client_called == 0)
+		if (rob.prevdist >= 0.7)
 		{
 			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
 			cout << "[INFO] Sto chiamando il client..." << endl;

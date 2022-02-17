@@ -17,7 +17,7 @@ string					aulainvio;
 string					receiver;
 int						reserved = 0;
 list<aula>				aulelist;
-int						scelta;
+int						scelta = 0;
 string					in;
 pick_delivery::login	msglog;
 pick_delivery::invio	msg2send;
@@ -26,6 +26,14 @@ ros::ServiceClient		SCsend;
 ros::ServiceServer		notifyServer;
 int 					logged = 0;
 
+void waitcheck(int time)
+{
+	cout << endl;
+	cout << "Controllo se il robot è arrivato..." << endl;
+	ros::Duration(time).sleep();
+	ros::spin();
+}
+
 void	mostra_aule(list<aula> aulelist)
 {
 	for (auto& a : aulelist)
@@ -33,6 +41,7 @@ void	mostra_aule(list<aula> aulelist)
 		cout << a.name << endl;
 	}	
 }
+
 bool	handle_notifica(pick_delivery::notifica::Request &req, pick_delivery::notifica::Response &res)
 {
 	if ((req.auladest == "") && (req.user == name))
@@ -41,7 +50,7 @@ bool	handle_notifica(pick_delivery::notifica::Request &req, pick_delivery::notif
 		scelta = 0;
 		res.picked = 2;
 	}
-	else if (req.auladest == aulaclient)
+	else
 	{
 		cout << req.msg  << "(ENTER per ritiralo)" << endl;
 		scelta = 0;
@@ -84,11 +93,12 @@ void	scegli()
 				{
 					ok = 1;
 					cout << "Il pacco può essere inviato, aspetta che il robot lo venga a ritirare" << endl;
+					waitcheck(5);
 				}
 				else if (msg2send.response.serv_resp == 2)
 				{
 					cout << "Il servizio è momentaneamente occupato, riprova più tardi" << endl;
-					ok = 2;
+					ok = 1;
 				}
 				else if (msg2send.response.serv_resp == 3)
 					cout << "L'aula che hai inserito non è valida, riprova" << endl;
@@ -96,6 +106,10 @@ void	scegli()
 					cout << "L'utente a cui vuoi inviare il pacco non esiste o non si trova nell'" << aulainvio << ", riprova"<< endl;
 				if (ok == 0)
 				{
+					cout << "Vuoi provare a rinviarlo?" << endl;
+					cin >> in;
+					if (in == "n")
+						break ;
 					cout << "A quale aula vuoi inviarlo?" << endl;
 					cin >> aulainvio;
 					cout << "Vuoi inviarlo a qualcuno in particolare nell'"<< aulainvio << "? (0 per non specificare)" << endl;
@@ -135,7 +149,14 @@ void	scegli()
 	}
 	else if (scelta == 3)
 	{
-		return ;
+		while (scelta == 3)
+		{
+			waitcheck(5);
+			cout << "Vuoi ancora aspettare? (y/n)" << endl;
+			cin >> in;
+			if (in == "n")
+				scelta = 0;
+		}
 	}
 	else if (scelta == 4)
 	{
@@ -149,8 +170,8 @@ void	scegli()
 		}
 		else
 		{
-			ROS_INFO("Aspetta! Sembra che ci sia un pacco per te in arrivo");
-			//scelta = 3;
+			cout << "Aspetta! Sembra che il robot stia venendo da te" << endl;
+			waitcheck(5);
 		}
 	}
 	else
@@ -205,22 +226,10 @@ int main(int argc, char **argv)
 			ROS_INFO("Sembra che ci sia stato un errore. Controlla il nome dell'aula!");
 		}
 	}
-	scegli();
-	while (scelta == 3 || scelta == 1)
+
+	while (scelta != 4)
 	{
-		cout << endl;
-		cout << "Aspettando il robot..." << endl;
-		ros::Duration(10).sleep();
-		ros::spin();
-		if (scelta == 3)
-		{
-			cout << "Vuoi ancora aspettare? (y/n)" << endl;
-			cin >> in;
-			if (in == "n")
-				scelta = 0;
-		}
-		if (scelta == 0)
-			scegli();
+		scegli();
 	}
 	return (0);
 }
