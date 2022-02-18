@@ -9,14 +9,14 @@
 [  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_eus
 [ 15%] Built target pick_delivery_generate_messages_cpp
-[ 37%] Built target pick_delivery_generate_messages_py
-[ 53%] Built target pick_delivery_generate_messages_lisp
-[ 68%] Built target pick_delivery_generate_messages_nodejs
-[ 87%] Built target pick_delivery_generate_messages_eus
+[ 31%] Built target pick_delivery_generate_messages_nodejs
+[ 53%] Built target pick_delivery_generate_messages_py
+[ 71%] Built target pick_delivery_generate_messages_eus
+[ 87%] Built target pick_delivery_generate_messages_lisp
 [ 87%] Built target pick_delivery_gencpp
 [ 87%] Built target pick_delivery_generate_messages
-[35m[1mScanning dependencies of target server[0m
-[ 90%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
-[ 96%] Built target client
-[100%] [32m[1mLinking CXX executable /home/me/lab/devel/.private/pick_delivery/lib/pick_delivery/server[0m
-[100%] Built target server
+[35m[1mScanning dependencies of target client[0m
+[ 93%] Built target server
+[ 96%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/me/lab/devel/.private/pick_delivery/lib/pick_delivery/client[0m
+[100%] Built target client

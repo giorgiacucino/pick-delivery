@@ -52,15 +52,21 @@ void	handle_notifica(const pick_delivery::s_to_c::ConstPtr& m)
 	if (m->pd == 1 && m->user == name)
 	{
 		res.resp = 2;
-		cout << "msg: " << m->msg << endl << flush;
+		need_to_wait = 0;
+		cout << "[INFO] " << m->msg << endl << flush;
+		pub_server.publish(res);
+		cout << "[INFO] Sto rispondendo al server con " << res.resp << endl;
+		ros::spinOnce();
 	}
 	else if (m->auladest == aulaclient && (m->user == name || m->user == "0") && m->pd == 2)
 	{
 		res.resp = 0;
-		cout << "msg: " << m->msg << endl << flush;
+		need_to_wait = 0;
+		cout << "[INFO] " << m->msg << endl << flush;
+		pub_server.publish(res);
+		cout << "[INFO] Sto rispondendo al server con " << res.resp << endl;
+		ros::spinOnce();
 	}
-	pub_server.publish(res);
-	ros::spinOnce();
 	return ;
 }
 
@@ -239,7 +245,7 @@ int main(int argc, char **argv)
 				cout << "Scelta non valida! Controlla il numero che hai inserito" << endl;
 			}
 		}
-		ros::spin();
+		ros::spinOnce();
 	}
 	return (0);
 }

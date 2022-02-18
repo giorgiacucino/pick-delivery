@@ -39,6 +39,7 @@ bool	handle_client(pick_delivery::login::Request &req, pick_delivery::login::Res
 			{
 				userlist.remove(u);
 				res.serv_resp = "Bye bye!";
+				return (1);
 			}
 			else if (u.hash == req.name)
 			{
@@ -162,15 +163,21 @@ void	callback_Server(const pick_delivery::c_to_s::ConstPtr& msg)
 	if (rob.status == 2)
 	{
 		(*sender).can_logout = 1;
+		cout << "[INFO] Il sender può anche uscire" << endl;
+
 		set_goal();
 	}
 	else if (rob.status == 0)
+	{
 		log_all_users(*auladest, 1);
+		sender = NULL;
+		cout << "[INFO] I receiver possono anche uscire" << endl;
+	}
+	
 }
 
 void 	callClient()
 {
-	cout << "stato attuale del robot: " << rob.status << endl;
 	if (rob.status == 0)
 		return ;
 	else if (rob.status == 1)
@@ -266,7 +273,6 @@ void	check_robot(const srrg2_core_ros::PlannerStatusMessage::ConstPtr& info)
 			cout << "[INFO] Il robot è arrivato a destinazione" << endl;
 			cout << "[INFO] Sto chiamando il client..." << endl;
 			callClient();
-			cout << "[INFO] Settando un nuovo goal..." << endl;
 		}
 	}
 	rob.prevdist = info->distance_to_global_goal;
