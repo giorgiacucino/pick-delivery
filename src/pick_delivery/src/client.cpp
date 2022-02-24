@@ -31,6 +31,7 @@ ros::ServiceClient		SCsend;
 ros::Publisher			pub_server;
 ros::Subscriber			sub_server;
 int 					logged = 0;
+int						is_receiver = 0;
 
 void	waitcheck()
 {
@@ -49,6 +50,12 @@ void	mostra_aule(list<aula> aulelist)
 
 void	handle_notifica(const pick_delivery::s_to_c::ConstPtr& m)
 {	
+	if (m->auladest == aulaclient && (m->user == name || m->user == "0") && m->pd == 0)
+	{
+		cout << "[INFO] " << m->msg << endl << flush;
+		is_receiver = 1;
+		need_to_wait = 1;
+	}
 	if (m->pd == 1 && m->user == name)
 	{
 		res.resp = 2;
@@ -135,6 +142,12 @@ int main(int argc, char **argv)
 		if (need_to_wait == 0)
 		{
 			scegli();
+			ros::spinOnce();
+			if (is_receiver == 1)
+			{
+				while (need_to_wait == 1)
+					ros::spinOnce();
+			}
 			if (scelta == 1)
 			{
 				cout << endl;
@@ -212,13 +225,22 @@ int main(int argc, char **argv)
 						ok = 1;
 					}
 					else
-						ROS_INFO("Sembra che ci sia stato un errore. Controlla il nome dell'aula!");
+						cout << "[INFO] "<< msglog.response.serv_resp <<"." << endl;
+						if (msglog.response.serv_resp == "Sta arrivando un pacco per te, non puoi cambiare aula")
+						{
+							need_to_wait = 1;
+							break ;
+						}
+						cout << "Vuoi ancora cambiare aula? (y/n)";
+						cin >> in;
+						if (in == "y")
+							break ;
 				}
 			}
 			else if (scelta == 3)
 			{
 				need_to_wait = 1;
-				cout << "Controllo se il robot è arrivato..." << endl;
+				cout << "Controllo se è arrivato il robot..." << endl;
 			}
 			else if (scelta == 4)
 			{

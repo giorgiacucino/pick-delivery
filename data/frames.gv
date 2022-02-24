@@ -1,0 +1,13 @@
+digraph G {
+"robot_0/base_footprint" -> "robot_0/base_link"[label=" Broadcaster: /stageros\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.9\nOldest transform: 523.0\n"];
+"robot_0/odom" -> "robot_0/base_footprint"[label=" Broadcaster: /stageros\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.9\nOldest transform: 523.0\n"];
+"robot_1/base_footprint" -> "robot_1/base_link"[label=" Broadcaster: /stageros\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.9\nOldest transform: 523.0\n"];
+"robot_1/base_link" -> "robot_1/base_laser_link"[label=" Broadcaster: /stageros\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.9\nOldest transform: 523.0\n"];
+"map" -> "robot_0/odom"[label=" Broadcaster: /shell_1645660954449230982\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.8\nOldest transform: 522.9\n"];
+"robot_1/odom" -> "robot_1/base_footprint"[label=" Broadcaster: /stageros\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.9\nOldest transform: 523.0\n"];
+"robot_0/base_link" -> "robot_0/base_laser_link"[label=" Broadcaster: /stageros\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 527.9\nOldest transform: 523.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 527.9"[ shape=plaintext ] ;
+}->"robot_1/odom";
+}

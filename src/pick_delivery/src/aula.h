@@ -13,11 +13,13 @@ class aula
         string name;
         float x;
         float y;
+		int	called;
         aula(string s, float tx, float ty)
 		{
 			name = s;
 			x = tx;
 			y = ty;
+			called = 0;
 		};
         bool operator==(const aula& a)
 		{

@@ -1,0 +1,14 @@
+<launch>
+  <master auto="start"/>
+  <param name="/use_sim_time" value="true"/>
+
+  <node pkg="stage_ros" type="stageros" name="stageros" args="/home/me/lab/myconfig/worldmy.world" respawn="false">
+  </node>
+
+  <node pkg="srrg2_map_server" type="map_server" name="mapserver" args="/home/me/lab/myconfig/yamlmy.yaml" respawn="false">
+  </node>
+
+  <node pkg="rviz" type="rviz" name="rviz" args="-d /home/me/lab/myconfig/rvizmy.rviz">
+  </node>
+
+</launch>

@@ -3,22 +3,22 @@
 [  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target _pick_delivery_generate_messages_check_deps_c_to_s
 [  0%] Built target _pick_delivery_generate_messages_check_deps_s_to_c
-[  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target _pick_delivery_generate_messages_check_deps_notifica
 [  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_eus
-[ 28%] Built target pick_delivery_generate_messages_py
-[ 37%] Built target pick_delivery_generate_messages_cpp
-[ 53%] Built target pick_delivery_generate_messages_lisp
-[ 68%] Built target pick_delivery_generate_messages_nodejs
+[ 15%] Built target pick_delivery_generate_messages_cpp
+[ 37%] Built target pick_delivery_generate_messages_py
+[ 53%] Built target pick_delivery_generate_messages_nodejs
+[ 68%] Built target pick_delivery_generate_messages_lisp
 [ 87%] Built target pick_delivery_generate_messages_eus
 [ 87%] Built target pick_delivery_gencpp
-[35m[1mScanning dependencies of target server[0m
 [ 87%] Built target pick_delivery_generate_messages
-[ 90%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
 [35m[1mScanning dependencies of target client[0m
-[ 93%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[35m[1mScanning dependencies of target server[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 93%] [32mBuilding CXX object CMakeFiles/server.dir/src/server.cpp.o[0m
 [ 96%] [32m[1mLinking CXX executable /home/me/lab/devel/.private/pick_delivery/lib/pick_delivery/client[0m
 [ 96%] Built target client
 [100%] [32m[1mLinking CXX executable /home/me/lab/devel/.private/pick_delivery/lib/pick_delivery/server[0m

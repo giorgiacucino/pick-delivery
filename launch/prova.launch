@@ -1,0 +1,27 @@
+<launch>
+  <master auto="start"/>
+  <param name="/use_sim_time" value="true"/>
+
+  <node pkg="stage_ros" type="stageros" name="stageros" args="/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/src/srrg2_navigation_2d/config/cappero_laser_odom_diag_2020-05-06-16-26-03.world" respawn="false">
+  </node>
+
+  <node pkg="srrg2_map_server" type="map_server" name="map_server" args="/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/src/srrg2_navigation_2d/config/cappero_laser_odom_diag_2020-05-06-16-26-03.yaml" respawn="false" >
+    <param name="frame_id" value="/map" />
+  </node>
+
+  <group ns="robot_0">
+    <param name="tf_prefix" value="robot_0" />
+
+    <node pkg="srrg2_executor" type="srrg2_shell" name="localizer" args="/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/src/srrg2_navigation_2d/config/run_localizer_live_ms.srrg" respawn="false"> </node>
+  </group>
+
+  <group ns="robot_1">
+    <param name="tf_prefix" value="robot_1" />
+
+    <node pkg="srrg2_executor" type="srrg2_shell" name="localizer" args="/home/me/labiagi_2020_21/workspaces/srrg2_labiagi/src/srrg2_navigation_2d/config/run_localizer_live_ms.srrg" respawn="false"> </node>
+  </group>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/me/labiagi_2020_21/workspaces/srrg2_labiagi/src/srrg2_navigation_2d/config/rviz_navigation2d.rviz">
+  </node>
+
+</launch>

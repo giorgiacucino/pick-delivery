@@ -11,6 +11,7 @@ class user
         float	y;
 		int		dup;
 		int		can_logout;
+		int		called;
         user(string s, int d)
 		{
 			name = s;
@@ -19,6 +20,7 @@ class user
 			dup = d;
 			can_logout = 1;
 			hash = get_hash(s, d);
+			called = 0;
 		};
         bool operator==(const user& a)
 		{

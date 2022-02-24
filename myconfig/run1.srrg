@@ -1,0 +1,6 @@
+open loc1.conf
+exec source open
+exec sink open
+exec requestor requestMap
+exec localizer startGlobal
+run runner
